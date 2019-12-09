@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from flask import abort
 from core import result
 
@@ -21,8 +22,19 @@ class ValueChecker:
                 }
                 abort(result(msg, 400))
 
-            wrong_type = type(value) != field_type
-            wrong_len = len(str(value)) > length
+            if field_type == date:
+                try:
+                    value = datetime.strptime(value, "%d-%m-%Y").date()
+                    wrong_type = False
+                    wrong_len = False
+                except:
+                    msg = {
+                        "message": 'for field {} date type format must be  : dd-mm-yyyy'.format(field)
+                    }
+                    abort(result(msg, 400))
+            else:
+                wrong_type = type(value) != field_type
+                wrong_len = len(str(value)) > length
             if wrong_type:
                 msg = {
                     "message": 'field {} it\'s must be {}'.format(field, field_type)

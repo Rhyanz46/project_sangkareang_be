@@ -1,5 +1,5 @@
 from core.database import db
-from apps.user.models import UserDetail
+from apps.user.models import User
 
 
 class CategoryAccess(db.Model):
@@ -14,4 +14,4 @@ class CategoryAccess(db.Model):
     check_job = db.Column(db.Boolean, default=True)
     service_job = db.Column(db.Boolean, default=True)
 
-    users = db.relationship(UserDetail, backref='category_access')
+    users = db.relationship(User, backref='category_access', lazy=True)

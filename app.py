@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_migrate import Migrate
+from flask_jwt_extended import JWTManager
 
 from core.config import config
 
@@ -20,12 +21,14 @@ def create_app():
     cli = CLI()
     cors = CORS()
     migrate = Migrate()
+    jwt = JWTManager(app)
 
     user = UserModule()
     file = FileModule()
     job = JobModule()
     category_access = CategoryAccessModule()
 
+    jwt.init_app(app)
     cli.init_app(app)
     cors.init_app(app)
     db.init_app(app)
