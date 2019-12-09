@@ -1,0 +1,12 @@
+{
+  "user_data" : {
+    "username" : "adminadmin",
+    "email" : "admin@admin.com",
+    "fullname": "admin admin",
+    "address" : "komputer",
+    "phone_number": 1234567890,
+    "work_start_time" : "20-12-2019",
+    "activate": true,
+    "password": "admin"
+  }
+}
