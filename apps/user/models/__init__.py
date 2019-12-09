@@ -1,5 +1,6 @@
 from datetime import datetime
 from core.database import db
+from apps.job.models import JobHistory
 
 
 class UserDetail(db.Model):
@@ -14,7 +15,7 @@ class UserDetail(db.Model):
     join_time = db.Column(db.TEXT)
     created_time = db.Column(db.DateTime, default=datetime.now())
 
-    # job_history = db.relationship(JobHistory, backref='user_detail')
+    job_history = db.relationship(JobHistory, backref='user_detail')
 
 
 class User(db.Model):
