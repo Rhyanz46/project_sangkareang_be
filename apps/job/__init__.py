@@ -1,9 +1,9 @@
 from .interfaces import bp
 
 
-class CategoryModule:
+class JobModule:
     def __init__(self):
-        from .models import Category
+        from .models import Job
 
     @staticmethod
     def init_app(app):

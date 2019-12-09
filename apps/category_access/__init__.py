@@ -1,9 +1,9 @@
 from .interfaces import bp
 
 
-class CommentModule:
+class CategoryAccessModule:
     def __init__(self):
-        from .models import Comment
+        from .models import CategoryAccess
 
     @staticmethod
     def init_app(app):
