@@ -40,7 +40,7 @@ def auth():
     return {"message": "waw"}, 200
 
 
-@bp.route('/<string:username>', methods=['PUT', 'GET'])
+@bp.route('/detail/<string:username>', methods=['PUT', 'GET'])
 def do_update(username):
     data = parser.ValueChecker(request.json)
     data.parse('username', field_type=str, nullable=True, length=30)
