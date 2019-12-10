@@ -6,6 +6,9 @@ class CategoryAccess(db.Model):
     __tablename__ = 'category_access'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
+    add_user = db.Column(db.Boolean, default=False)
+    delete_user = db.Column(db.Boolean, default=False)
+    edit_user = db.Column(db.Boolean, default=False)
     add_job = db.Column(db.Boolean, default=True)
     delete_job = db.Column(db.Boolean, default=False)
     update_job = db.Column(db.Boolean, default=False)

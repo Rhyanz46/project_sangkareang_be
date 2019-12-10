@@ -89,7 +89,7 @@ def add_seek():
         password=seek_data['user_data']['password'],
         user_detail=detail
     )
-    user.add()
+    user.commit()
     click.echo("Add Data Done.!! :)")
 
 

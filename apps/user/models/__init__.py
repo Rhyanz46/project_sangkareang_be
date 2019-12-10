@@ -16,6 +16,32 @@ class UserDetail(db.Model):
 
     job_history = db.relationship(JobHistory, backref='user_detail')
 
+    def __serialize__(self, id=None):
+        if not id:
+            return {
+                "id": self.id,
+                "user_id": self.user_id,
+                "fullname": self.fullname,
+                "address": self.address,
+                "phone_number": self.phone_number,
+                "work_start_time": self.work_start_time,
+                "activate": self.activate,
+                "created_time": self.created_time
+            }
+        user = UserDetail.query.get(id)
+        if not user:
+            return None
+        return {
+            "id": user.id,
+            "user_id": user.user_id,
+            "fullname": user.fullname,
+            "address": user.address,
+            "phone_number": user.phone_number,
+            "work_start_time": user.work_start_time,
+            "activate": user.activate,
+            "created_time": user.created_time
+        }
+
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -27,4 +53,13 @@ class User(db.Model):
 
     user_detail = db.relationship(UserDetail, uselist=False, backref='user')
 
-
+    def __serialize__(self, detail=False):
+        data = {
+            "id": self.id,
+            "category_access_id": self.category_access_id,
+            "username": self.username,
+            "email": self.email
+        }
+        if detail:
+            data.update({"user_detail": UserDetail().__serialize__(id=self.id)})
+        return data

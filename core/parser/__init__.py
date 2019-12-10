@@ -16,11 +16,15 @@ class ValueChecker:
 
         if is_dict:
             value = data_request.get(field)
-            if not nullable and not value:
-                msg = {
-                    "message": 'field {} it\'s can\'t be null'.format(field)
-                }
-                abort(result(msg, 400))
+            if not nullable:
+                # print("nullable : ", nullable, ", field : ", field, ", value : ", value)
+                if not value:
+                    msg = {
+                        "message": 'field {} it\'s can\'t be null'.format(field)
+                    }
+                    abort(result(msg, 400))
+            else:
+                return self.__parsed.update({field: value})
 
             if field_type == date:
                 try:

@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy, Model
 
 
 class Database(Model):
-    def add(self):
+    def commit(self):
         db.session.add(self)
         db.session.commit()
 
