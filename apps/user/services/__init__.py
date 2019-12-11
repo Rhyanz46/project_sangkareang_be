@@ -82,6 +82,7 @@ def update(username, data):
     return {'token': "edited"}, 200
 
 
+@jwt_required
 def show_user_detail(username):
     user = User.query.filter_by(username=username).first()
     if not user:

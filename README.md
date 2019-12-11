@@ -1,15 +1,15 @@
 # liqodemy
 
-__virtualenv -p python3 env__
+`virtualenv -p python3 env`
 <br>
-__. env/bin/activate__
+`. env/bin/activate`
 
-__pip install -r req.txt__
+`pip install -r req.txt`
 <br>
-__export FLASK_APP=app.py__
+`export FLASK_APP=app.py`
 <br>
-__export FLASK_ENV=development__
+`export FLASK_ENV=development`
 
-__flask new__
+`flask new`
 <br>
-__flask run__
+`flask run`
