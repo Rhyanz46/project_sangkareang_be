@@ -9,15 +9,25 @@ class ValueChecker:
         self.type = type(data_request)
         self.__parsed = {}
 
-    def parse(self, field, field_type, nullable=False, length=float("inf")):
+    def parse(self, field, field_type, nullable=False, length=float("inf"), enum=None):
         is_dict = self.type == dict
 
         data_request = self.data_request
+        if isinstance(None, self.type):
+            return self.__parsed.update({field: None})
+
+        if enum != None and type(enum) != list:
+            raise ValueError("enum must be list, for '{}' field".format(field))
 
         if is_dict:
             value = data_request.get(field)
+            if enum:
+                if value not in enum:
+                    msg = {
+                        "message": 'value error for field {}'.format(field)
+                    }
+                    abort(result(msg, 400))
             if not nullable:
-                # print("nullable : ", nullable, ", field : ", field, ", value : ", value)
                 if not value:
                     msg = {
                         "message": 'field {} it\'s can\'t be null'.format(field)

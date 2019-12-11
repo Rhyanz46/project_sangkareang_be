@@ -1,5 +1,6 @@
 from flask_jwt_extended import jwt_required
 from ..models import CategoryAccess
+from apps.user.models import User
 
 
 @jwt_required
@@ -87,3 +88,29 @@ def edit_ca(name, data):
     except:
         return {"message": "cant save"}, 500
     return {"message": "{} has been updated".format(name)}
+
+
+@jwt_required
+def set_user(ca_name, user_id, data):
+    action = data['action']
+    user = User.query.filter_by(id=user_id).first()
+    if not user:
+        return {"message": "user with id : {} is not found".format(user_id)}, 402
+    ca = CategoryAccess.query.filter_by(name=ca_name).first()
+    if not ca:
+        return {"message": "{} is not found".format(ca_name)}, 402
+    if action == "on":
+        try:
+            ca.users.append(user)
+            ca.commit()
+        except:
+            return {"message": "error to set {} to {}".format(user.username, ca_name)}, 500
+        return {"message": "success to set {} to {}".format(user.username, ca_name)}
+    elif action == "off":
+        try:
+            ca.users.remove(user)
+            ca.commit()
+        except:
+            return {"message": "error to unset {} from {}".format(user.username, ca_name)}, 500
+        return {"message": "success to unset {} from {}".format(user.username, ca_name)}
+

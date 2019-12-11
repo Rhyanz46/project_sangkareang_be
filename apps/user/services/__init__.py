@@ -17,11 +17,11 @@ def store_data_user(data):
         password=data['password'],
         user_detail=detail
     )
-    # try:
-    user.commit()
-    return user
-    # except:
-    #     return None
+    try:
+        user.commit()
+        return user
+    except:
+        return None
 
 
 def register(data):
