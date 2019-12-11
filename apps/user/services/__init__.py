@@ -58,21 +58,21 @@ def update(username, data):
     if not user:
         return {'error': 'user is not found'}, 402
 
-    if data['username']:
+    if data['username'] != None:
         user.username = data['username']
-    if data['email']:
+    if data['email'] != None:
         user.email = data['email']
-    if data['fullname']:
+    if data['fullname'] != None:
         user.fullname = data['fullname']
-    if data['address']:
+    if data['address'] != None:
         user.address = data['address']
-    if data['phone_number']:
+    if data['phone_number'] != None:
         user.phone_number = data['phone_number']
-    if data['work_start_time']:
+    if data['work_start_time'] != None:
         user.work_start_time = data['work_start_time']
-    if data['activate']:
+    if data['activate'] != None:
         user.activate = data['activate']
-    if data['password']:
+    if data['password'] != None:
         user.password = data['password']
 
     try:
