@@ -5,7 +5,7 @@ from ..services import set_access_user
 bp = Blueprint('category_access', __name__, url_prefix='/category-access')
 
 
-@bp.route('/', methods=['POST'])
+@bp.route('', methods=['POST'])
 def index():
     data = parser.ValueChecker(request.json)
     data.parse('name', field_type=str, length=30)
