@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 from core import method_is, parser
-from ..services import set_ca, get_list_ca, edit_ca, set_user
+from ..services import set_ca, get_list_ca, edit_ca, set_user, user_of_ca
 
 bp = Blueprint('category_access', __name__, url_prefix='/category-access')
 
@@ -48,3 +48,8 @@ def set_ca_user(ca_name, user_id):
     data = parser.ValueChecker(request.json)
     data.parse('action', field_type=str, enum=["on", "off"], length=30)
     return set_user(ca_name, user_id, data.get_parsed())
+
+
+@bp.route('/<string:ca_name>/userlist', methods=['GET'])
+def get_user_ca_list(ca_name):
+    return user_of_ca(ca_name)

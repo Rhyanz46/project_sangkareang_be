@@ -1,5 +1,8 @@
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 from ..models import User, UserDetail
+from datetime import timedelta
+
+expires = timedelta(days=1)
 
 
 def store_data_user(data):
@@ -37,9 +40,9 @@ def register(data):
 
     saved = store_data_user(data)
     if not saved:
-        return {'error': 'failed to save data'}, 402
-    token = create_access_token(identity=saved.id)
-    return {'token': token}, 200
+        return {'error': 'failed to save data'},
+    token = create_access_token(identity=saved.id, expires_delta=expires)
+    return {'token': token}, 201
 
 
 def login(data):
@@ -47,8 +50,8 @@ def login(data):
     password = data['password']
     user = User.query.filter(User.username == username, User.password == password).first()
     if user:
-        token = create_access_token(identity=user.id)
-        return {'token': token}, 200
+        token = create_access_token(identity=user.id, expires_delta=expires)
+        return {'token': token}, 201
     return {'data': 'username atau password salah'}, 403
 
 

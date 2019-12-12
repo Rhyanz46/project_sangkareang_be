@@ -43,17 +43,11 @@ def set_ca(data):
 
 
 @jwt_required
-def get_list_ca(name=None):
-    if name:
-        ca = CategoryAccess.query.filter_by(name=name).first()
-        return ca.__serialize__()
-    ca = CategoryAccess.query.all()
-    result = []
-    for a in ca:
-        result.append(a.name)
-    if len(result) < 0:
+def get_list_ca(name):
+    ca = CategoryAccess.query.filter_by(name=name).first()
+    if not ca:
         return {"data": "empty"}, 402
-    return {"data": result}
+    return {"data": ca.__serialize__()}
 
 
 @jwt_required
@@ -114,3 +108,15 @@ def set_user(ca_name, user_id, data):
             return {"message": "error to unset {} from {}".format(user.username, ca_name)}, 500
         return {"message": "success to unset {} from {}".format(user.username, ca_name)}
 
+
+@jwt_required
+def user_of_ca(ca_name):
+    ca = CategoryAccess.query.filter_by(name=ca_name).first()
+    if not ca:
+        return {"message": "this category permission is not found"}, 402
+    if len(ca.users) <= 0:
+        return {"message": "no user found at this category permission"}, 402
+    result = []
+    for item in ca.users:
+        result.append({"user_id": item.id, "username": item.username})
+    return {"data": result}
