@@ -2,6 +2,11 @@ from datetime import datetime
 from core.database import db
 
 
+user_jobs = db.Table('user_jobs',
+                      db.Column('job_id', db.Integer, db.ForeignKey('job.id'), primary_key=True),
+                      db.Column('user_id', db.Integer, db.ForeignKey('user.id'), primary_key=True))
+
+
 class JobHistory(db.Model):
     __tablename__ = 'job_history'
     id = db.Column(db.Integer, primary_key=True)
@@ -19,5 +24,11 @@ class Job(db.Model):
     start_time = db.Column(db.SmallInteger)
     deadline = db.Column(db.SmallInteger)
     status = db.Column(db.SmallInteger)
+
+    users = db.relationship(
+        'User',
+        secondary=user_jobs,
+        lazy='subquery',
+        backref='job')
 
     history = db.relationship(JobHistory, uselist=False, backref='job')

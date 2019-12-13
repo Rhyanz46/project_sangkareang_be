@@ -43,10 +43,18 @@ def set_ca(data):
 
 
 @jwt_required
-def get_list_ca(name):
+def get_list_ca(name=None):
+    if not name:
+        ca = CategoryAccess.query.all()
+        result = []
+        for a in ca:
+            result.append(a.name)
+        if len(result) <= 0:
+            return {"data": "empty"}, 204
+        return {"data": result}
     ca = CategoryAccess.query.filter_by(name=name).first()
     if not ca:
-        return {"data": "empty"}, 402
+        return {"data": "empty"}, 204
     return {"data": ca.__serialize__()}
 
 
@@ -54,7 +62,7 @@ def get_list_ca(name):
 def edit_ca(name, data):
     ca = CategoryAccess.query.filter_by(name=name).first()
     if not ca:
-        return {"message": "{} is not found".format(name)}, 402
+        return {"message": "{} is not found".format(name)}, 204
     if data['name'] != None:
         ca.name = data['name']
     if data['add_user'] != None:
@@ -89,10 +97,10 @@ def set_user(ca_name, user_id, data):
     action = data['action']
     user = User.query.filter_by(id=user_id).first()
     if not user:
-        return {"message": "user with id : {} is not found".format(user_id)}, 402
+        return {"message": "user with id : {} is not found".format(user_id)}, 204
     ca = CategoryAccess.query.filter_by(name=ca_name).first()
     if not ca:
-        return {"message": "{} is not found".format(ca_name)}, 402
+        return {"message": "{} is not found".format(ca_name)}, 204
     if action == "on":
         try:
             ca.users.append(user)
@@ -113,9 +121,9 @@ def set_user(ca_name, user_id, data):
 def user_of_ca(ca_name):
     ca = CategoryAccess.query.filter_by(name=ca_name).first()
     if not ca:
-        return {"message": "this category permission is not found"}, 402
+        return {"message": "this category permission is not found"}, 204
     if len(ca.users) <= 0:
-        return {"message": "no user found at this category permission"}, 402
+        return {"message": "no user found at this category permission"}, 204
     result = []
     for item in ca.users:
         result.append({"user_id": item.id, "username": item.username})
