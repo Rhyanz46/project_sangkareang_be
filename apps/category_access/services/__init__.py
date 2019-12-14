@@ -54,7 +54,7 @@ def get_list_ca(name=None):
         return {"data": result}
     ca = CategoryAccess.query.filter_by(name=name).first()
     if not ca:
-        return {"data": "empty"}, 204
+        return {"data": "category {} is not found".format(name)}, 400
     return {"data": ca.__serialize__()}
 
 

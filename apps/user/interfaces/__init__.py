@@ -7,10 +7,6 @@ from ..services import register, login, update, show_user_detail
 
 bp = Blueprint('user', __name__, url_prefix='/user')
 
-ddd = [
-    {"message": "Welcome"}
-]
-
 
 @bp.route('', methods=['GET', 'POST'])
 def index():

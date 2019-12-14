@@ -16,19 +16,25 @@ class JobHistory(db.Model):
     time_created = db.Column(db.DateTime, default=datetime.now())
 
 
+class SubJob(db.Model):
+    __tablename__ = 'sub_job'
+    id = db.Column(db.Integer, primary_key=True)
+    job_id = db.Column(db.Integer, db.ForeignKey('job.id'))
+    name = db.Column(db.String(255))
+    done = db.Column(db.Boolean, default=False)
+
+
 class Job(db.Model):
     __tablename__ = 'job'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
     description = db.Column(db.TEXT)
-    start_time = db.Column(db.SmallInteger)
-    deadline = db.Column(db.SmallInteger)
-    status = db.Column(db.SmallInteger)
+    start_time = db.Column(db.Date, default=datetime.now())
+    deadline = db.Column(db.Date)
+    done = db.Column(db.Boolean, default=False)
 
-    users = db.relationship(
-        'User',
-        secondary=user_jobs,
-        lazy='subquery',
-        backref='job')
+    sub_job = db.relationship(SubJob, backref='job')
+    history = db.relationship(JobHistory, backref='job')
+    users = db.relationship('User', secondary=user_jobs, lazy='subquery', backref='job')
 
-    history = db.relationship(JobHistory, uselist=False, backref='job')
+    time_created = db.Column(db.DateTime, default=datetime.now())
