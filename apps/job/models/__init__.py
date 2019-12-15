@@ -38,3 +38,14 @@ class Job(db.Model):
     users = db.relationship('User', secondary=user_jobs, lazy='subquery', backref='job')
 
     time_created = db.Column(db.DateTime, default=datetime.now())
+
+    def __serialize__(self):
+        data = {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "start_time": self.start_time,
+            "deadline": self.deadline,
+            "done": self.done
+        }
+        return data

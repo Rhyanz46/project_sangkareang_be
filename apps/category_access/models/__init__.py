@@ -6,6 +6,7 @@ class CategoryAccess(db.Model):
     __tablename__ = 'category_access'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
+    root_access = db.Column(db.Boolean, default=False)
     add_user = db.Column(db.Boolean, default=False)
     delete_user = db.Column(db.Boolean, default=False)
     edit_user = db.Column(db.Boolean, default=False)
@@ -23,6 +24,7 @@ class CategoryAccess(db.Model):
         data = {
             "id": self.id,
             "name": self.name,
+            "root_access": self.root_access,
             "add_user": self.add_user,
             "delete_user": self.delete_user,
             "edit_user": self.edit_user,
@@ -41,6 +43,7 @@ class CategoryAccess(db.Model):
             data = {
                 "id": ca.id,
                 "name": ca.name,
+                "root_access": ca.root_access,
                 "add_user": ca.add_user,
                 "delete_user": ca.delete_user,
                 "edit_user": ca.edit_user,
