@@ -108,5 +108,5 @@ def edit_job(job_id, data):
     try:
         job.commit()
     except:
-        return {"message": "error to save!!"}, 50
+        return {"message": "error to edit, tell you software engineer!!"}, 50
     return {"message": "success to edit"}

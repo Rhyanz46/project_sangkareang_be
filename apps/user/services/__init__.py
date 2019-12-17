@@ -1,8 +1,39 @@
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 from ..models import User, UserDetail
+from apps.category_access.models import CategoryAccess
 from datetime import timedelta
 
 expires = timedelta(days=1)
+
+
+def full_edit_user(data, user_target):
+    username_exist = User.query.filter_by(username=data['username']).first()
+    email_exist = User.query.filter_by(email=data['email']).first()
+    phone_exist = UserDetail.query.filter_by(phone_number=data['phone_number']).first()
+    if username_exist:
+        return {'message': 'username is exist'}, 400
+    elif email_exist:
+        return {'message': 'email is exist'}, 400
+    elif phone_exist:
+        return {'message': 'phone_number is already used'}, 400
+
+    if data['username'] != None:
+        user_target.username = data['username']
+    if data['email'] != None:
+        user_target.email = data['email']
+    if data['fullname'] != None:
+        user_target.fullname = data['fullname']
+    if data['address'] != None:
+        user_target.address = data['address']
+    if data['phone_number'] != None:
+        user_target.phone_number = data['phone_number']
+    if data['work_start_time'] != None:
+        user_target.work_start_time = data['work_start_time']
+    if data['activate'] != None:
+        user_target.activate = data['activate']
+    if data['password'] != None:
+        user_target.password = data['password']
+    return user_target
 
 
 def store_data_user(data):
@@ -27,10 +58,23 @@ def store_data_user(data):
         return None
 
 
+@jwt_required
 def register(data):
     username_exist = User.query.filter_by(username=data['username']).first()
     email_exist = User.query.filter_by(email=data['email']).first()
     phone_exist = UserDetail.query.filter_by(phone_number=data['phone_number']).first()
+
+    user = User.query.filter_by(id=get_jwt_identity()).first()
+    if not user:
+        return {"message": "user authentication is wrong"}, 400
+
+    ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
+    if not ca:
+        return {"message": "you permission is not setup"}, 403
+
+    if not ca.root_access:
+        return {"message": "you have not access"}, 403
+
     if username_exist:
         return {'message': 'username is exist'}, 400
     elif email_exist:
@@ -51,43 +95,73 @@ def login(data):
     user = User.query.filter(User.username == username, User.password == password).first()
     if user:
         token = create_access_token(identity=user.id, expires_delta=expires)
-        return {'token': token}, 201
+        return {'token': token}, 200
     return {'data': 'username atau password salah'}, 403
 
 
 @jwt_required
 def update(username, data):
-    user = User.query.filter_by(username=username).first()
+    user_target = User.query.filter_by(username=username).first()
+
+    user = User.query.filter_by(id=get_jwt_identity()).first()
     if not user:
+        return {"message": "user authentication is wrong"}, 400
+
+    ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
+    if not ca:
+        return {"message": "you permission is not setup"}, 403
+
+    if not user_target:
         return {'error': 'user is not found'}, 402
 
-    if data['username'] != None:
-        user.username = data['username']
-    if data['email'] != None:
-        user.email = data['email']
-    if data['fullname'] != None:
-        user.fullname = data['fullname']
-    if data['address'] != None:
-        user.address = data['address']
-    if data['phone_number'] != None:
-        user.phone_number = data['phone_number']
-    if data['work_start_time'] != None:
-        user.work_start_time = data['work_start_time']
-    if data['activate'] != None:
-        user.activate = data['activate']
-    if data['password'] != None:
-        user.password = data['password']
-
+    if user.id == user_target.id:
+        user_target = full_edit_user(data, user_target)
+    else:
+        if not ca.root_access:
+            if data['username'] != None:
+                return {'error': 'you have not permission to edit username of this user'}, 403
+            if data['email'] != None:
+                return {'error': 'you have not permission to edit email of this user'}, 403
+            if data['fullname'] != None:
+                return {'error': 'you have not permission to edit fullname of this user'}, 403
+            if data['address'] != None:
+                return {'error': 'you have not permission to edit address of this user'}, 403
+            if data['phone_number'] != None:
+                return {'error': 'you have not permission to edit phone number of this user'}, 403
+            if data['work_start_time'] != None:
+                user_target.work_start_time = data['work_start_time']
+            if data['activate'] != None:
+                user_target.activate = data['activate']
+            if data['password'] != None:
+                return {'error': 'you have not permission to password of this user'}, 403
+        else:
+            user_target = full_edit_user(data, user_target)
     try:
-        user.commit()
+        user_target.commit()
     except:
         return {'error': 'something wrong'}, 402
-    return {'token': "edited"}, 200
+    return {'message': "update"}, 200
 
 
 @jwt_required
 def show_user_detail(username):
-    user = User.query.filter_by(username=username).first()
+    user_target = User.query.filter_by(username=username).first()
+
+    user = User.query.filter_by(id=get_jwt_identity()).first()
     if not user:
+        return {"message": "user authentication is wrong"}, 400
+
+    ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
+    if not ca:
+        return {"message": "you permission is not setup"}, 403
+
+    if not user_target:
         return {'error': 'user is not found'}, 402
-    return user.__serialize__(detail=True), 200
+
+    if user.id == user_target.id:
+        return user_target.__serialize__(detail=True), 200
+
+    if not ca.show_user:
+        return {"message": "you not have permission"}, 403
+
+    return user_target.__serialize__(detail=True), 200

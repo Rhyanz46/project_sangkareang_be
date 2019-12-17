@@ -14,6 +14,7 @@ class CategoryAccess(db.Model):
     delete_job = db.Column(db.Boolean, default=False)
     update_job = db.Column(db.Boolean, default=False)
     show_job = db.Column(db.Boolean, default=True)
+    show_user = db.Column(db.Boolean, default=True)
     print_job = db.Column(db.Boolean, default=True)
     check_job = db.Column(db.Boolean, default=True)
     service_job = db.Column(db.Boolean, default=True)
