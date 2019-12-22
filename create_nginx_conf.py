@@ -1,9 +1,9 @@
 import os
 
-folder_nginx = "/etc/nginx/conf.d"
+folder_nginx = "/etc/nginx/sites-available"
 config = 'server {' \
-         '\n\tlisten\t80;' \
-         '\n\tserver_name  localhost;' \
+         '\n\tlisten\t5000;' \
+         '\n\tserver_name localhost;' \
          '\n\tlocation / {' \
          '\n\t\tproxy_pass http://localhost:9000;' \
          '\n\t}' \
@@ -11,7 +11,7 @@ config = 'server {' \
 
 if os.path.isdir(folder_nginx):
     try:
-        nginx_result = folder_nginx + "/be_sangkareang.conf"
+        nginx_result = folder_nginx + "/default"
         f = open(nginx_result, "w")
         f.write(config)
         f.close()
