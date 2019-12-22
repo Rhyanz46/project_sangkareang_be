@@ -11,8 +11,12 @@ DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD")
 DATABASE_NAME = os.environ.get("DATABASE_NAME")
 
 config = {
-    'SQLALCHEMY_DATABASE_URI': 'mysql://{}:{}@{}/{}'.
-        format(DATABASE_USER, DATABASE_PASSWORD, DATABASE_HOST, DATABASE_NAME),
+    'SQLALCHEMY_DATABASE_URI': 'mysql://{}:{}@{}/{}'.format(
+        DATABASE_USER,
+        DATABASE_PASSWORD,
+        DATABASE_HOST,
+        DATABASE_NAME
+    ),
     'SQLALCHEMY_TRACK_MODIFICATIONS': False,
     'SECRET_KEY': 'keren',
     'APPLICATION_ROOT': os.getcwd()
