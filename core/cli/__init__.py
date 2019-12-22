@@ -65,8 +65,25 @@ def new_command():
 @with_appcontext
 def add_seek():
     from apps.user.models import User, UserDetail
+    from apps.category_access.models import CategoryAccess
     seek_data = open('seek_data.json')
     seek_data = json.load(seek_data)
+
+    ca = CategoryAccess(
+        name="root",
+        root_access=True,
+        add_user=True,
+        delete_user=True,
+        edit_user=True,
+        add_job=True,
+        delete_job=True,
+        update_job=True,
+        show_job=True,
+        show_user=True,
+        print_job=True,
+        check_job=True,
+        service_job=True
+    )
 
     detail = UserDetail(
         fullname=seek_data['user_data']['fullname'],
@@ -83,6 +100,8 @@ def add_seek():
         user_detail=detail
     )
     user.commit()
+    ca.users.append(user)
+    ca.commit()
     click.echo("Add Data Done.!! :)")
 
 
