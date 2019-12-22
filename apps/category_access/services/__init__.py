@@ -48,7 +48,7 @@ def get_list_ca(name=None):
         ca = CategoryAccess.query.all()
         result = []
         for a in ca:
-            result.append(a.name)
+            result.append(a.__serialize__())
         if len(result) <= 0:
             return {"data": "empty"}, 204
         return {"data": result}
