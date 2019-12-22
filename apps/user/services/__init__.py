@@ -94,8 +94,9 @@ def login(data):
     password = data['password']
     user = User.query.filter(User.username == username, User.password == password).first()
     if user:
+        ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
         token = create_access_token(identity=user.id, expires_delta=expires)
-        return {'token': token}, 200
+        return {'token': token, 'ca': ca.name}, 200
     return {'data': 'username atau password salah'}, 403
 
 

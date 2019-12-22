@@ -28,7 +28,7 @@ class ValueChecker:
                     }
                     abort(result(msg, 400))
             if not nullable:
-                if not value:
+                if isinstance(None, type(value)):
                     msg = {
                         "message": 'field {} it\'s can\'t be null'.format(field)
                     }
