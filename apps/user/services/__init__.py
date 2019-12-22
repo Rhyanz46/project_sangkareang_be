@@ -148,12 +148,15 @@ def update(username, data):
 
 
 @jwt_required
-def show_user_detail(username):
-    user_target = User.query.filter_by(username=username).first()
-
+def show_user_detail(username=None):
     user = User.query.filter_by(id=get_jwt_identity()).first()
     if not user:
         return {"message": "user authentication is wrong"}, 400
+
+    if not isinstance(None, type(username)):
+        user_target = User.query.filter_by(username=username).first()
+    else:
+        user_target = user
 
     ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
     if not ca:
@@ -169,3 +172,4 @@ def show_user_detail(username):
         return {"message": "you not have permission"}, 403
 
     return user_target.__serialize__(detail=True), 200
+

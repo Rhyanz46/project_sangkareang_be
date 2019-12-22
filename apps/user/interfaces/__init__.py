@@ -22,7 +22,7 @@ def index():
 
     if method_is('POST'):
         return register(data.get_parsed())
-    return {"message": "waw"}, 200
+    return show_user_detail()
 
 
 @bp.route('/auth', methods=['GET', 'POST'])
