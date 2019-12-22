@@ -8,6 +8,11 @@ config = '[program:be_sangkareang]' \
          '\nautorestart=true\n'.format(os.getcwd(), os.getcwd())
 
 if os.path.isdir(folder_supervisor):
-    f = open(folder_supervisor + "/be_sangkareang.conf", "w")
-    f.write(config)
-    f.close()
+    try:
+        supervisor_result = folder_supervisor + "/be_sangkareang.conf"
+        f = open(supervisor_result, "w")
+        f.write(config)
+        f.close()
+        print("success to write " + supervisor_result)
+    except:
+        print("failed to write " + supervisor_result)

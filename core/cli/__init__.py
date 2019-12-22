@@ -6,7 +6,6 @@ import pathlib
 from flask import current_app
 from flask.cli import with_appcontext
 import mysql.connector
-from time import sleep
 from datetime import datetime
 
 from core.config import (
@@ -54,17 +53,11 @@ def reset():
 @with_appcontext
 def new_command():
     os.system("flask delete-db")
-    for i in range(10):
-        dots = "." * i
-        click.echo("waiting for create new database {}".format(dots))
-        sleep(0.2)
-        print(u"{}[2J{}[;H".format(chr(27), chr(27)))
     mysql_cursor.execute("CREATE DATABASE {}".format(DATABASE_NAME))
     os.system("flask db init")
     os.system("flask db migrate")
     os.system("flask db upgrade")
     os.system("flask add-seek")
-    print(u"{}[2J{}[;H".format(chr(27), chr(27)))
     click.echo("Done.!! :)")
 
 
