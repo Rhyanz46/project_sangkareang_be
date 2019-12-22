@@ -15,4 +15,7 @@ if os.path.isdir(folder_supervisor):
         f.close()
         print("success to write " + supervisor_result)
     except:
-        print("failed to write " + supervisor_result)
+        print("error to write " + supervisor_result)
+else:
+    print("supervisor for this service is not running")
+    print("make sure you supervisor is installed...!!!")

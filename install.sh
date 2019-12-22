@@ -9,5 +9,11 @@ sudo python3 create_supervisor_conf.py
 sudo supervisorctl reread
 sudo service supervisor restart
 echo "wait for 10 second"
-sleep 10s
+sleep 5s
 sudo supervisorctl status
+sudo python3 create_nginx_conf.py
+sudo nginx -t
+sudo service nginx restart
+echo "wait for 10 second"
+sleep 5s
+sudo service nginx status
