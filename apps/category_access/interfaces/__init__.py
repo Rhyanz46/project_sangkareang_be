@@ -24,10 +24,10 @@ def ca():
     return set_ca(data.get_parsed())
 
 
-@bp.route('/<string:name>', methods=['PUT', 'GET'])
-def ca_detail(name):
+@bp.route('/<int:id>', methods=['PUT', 'GET'])
+def ca_detail(id):
     if method_is('GET'):
-        return get_list_ca(name=name)
+        return get_list_ca(id=id)
     data = parser.ValueChecker(request.json)
     data.parse('name', nullable=True, field_type=str, length=30)
     data.parse('add_user', nullable=True, field_type=bool, length=10)
@@ -40,7 +40,7 @@ def ca_detail(name):
     data.parse('print_job', nullable=True, field_type=bool, length=10)
     data.parse('check_job', nullable=True, field_type=bool, length=10)
     data.parse('service_job', nullable=True, field_type=bool, length=10)
-    return edit_ca(name, data.get_parsed())
+    return edit_ca(id, data.get_parsed())
 
 
 @bp.route('/<string:ca_name>/<int:user_id>', methods=['POST'])

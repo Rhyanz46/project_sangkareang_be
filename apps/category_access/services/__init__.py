@@ -43,8 +43,8 @@ def set_ca(data):
 
 
 @jwt_required
-def get_list_ca(name=None):
-    if not name:
+def get_list_ca(id=None):
+    if isinstance(None, type(id)):
         ca = CategoryAccess.query.all()
         result = []
         for a in ca:
@@ -52,17 +52,17 @@ def get_list_ca(name=None):
         if len(result) <= 0:
             return {"data": "empty"}, 204
         return {"data": result}
-    ca = CategoryAccess.query.filter_by(name=name).first()
+    ca = CategoryAccess.query.filter_by(id=id).first()
     if not ca:
-        return {"data": "category {} is not found".format(name)}, 400
+        return {"data": "category access with id {} is not found".format(id)}, 400
     return {"data": ca.__serialize__()}
 
 
 @jwt_required
-def edit_ca(name, data):
-    ca = CategoryAccess.query.filter_by(name=name).first()
+def edit_ca(id, data):
+    ca = CategoryAccess.query.filter_by(id=id).first()
     if not ca:
-        return {"message": "{} is not found".format(name)}, 204
+        return {"message": "id {} is not found".format(id)}, 204
     if data['name'] != None:
         ca.name = data['name']
     if data['add_user'] != None:
@@ -89,7 +89,7 @@ def edit_ca(name, data):
         ca.commit()
     except:
         return {"message": "cant save"}, 500
-    return {"message": "{} has been updated".format(name)}
+    return {"message": "{} has been updated".format(ca.name)}
 
 
 @jwt_required
