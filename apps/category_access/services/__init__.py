@@ -128,3 +128,4 @@ def user_of_ca(ca_name):
     for item in ca.users:
         result.append({"user_id": item.id, "username": item.username})
     return {"data": result}
+
