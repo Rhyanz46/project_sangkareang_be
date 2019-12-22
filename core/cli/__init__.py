@@ -10,16 +10,16 @@ from time import sleep
 from datetime import datetime
 
 from core.config import (
-    mysql_db,
-    mysql_host,
-    mysql_pass,
-    mysql_user
+    DATABASE_NAME,
+    DATABASE_HOST,
+    DATABASE_PASSWORD,
+    DATABASE_USER
 )
 
 db = mysql.connector.connect(
-    host=mysql_host,
-    user=mysql_user,
-    passwd=mysql_pass
+    host=DATABASE_HOST,
+    user=DATABASE_USER,
+    passwd=DATABASE_PASSWORD
 )
 
 mysql_cursor = db.cursor()
@@ -44,10 +44,10 @@ def reset():
         shutil.rmtree(pycache_path)
 
     try:
-        mysql_cursor.execute("DROP DATABASE {}".format(mysql_db))
-        click.echo('Database {} has been deleted..!!!'.format(mysql_db))
+        mysql_cursor.execute("DROP DATABASE {}".format(DATABASE_NAME))
+        click.echo('Database {} has been deleted..!!!'.format(DATABASE_NAME))
     except:
-        click.echo('Database "{}" is not exist, so "delete action" is not running'.format(mysql_db))
+        click.echo('Database "{}" is not exist, so "delete action" is not running'.format(DATABASE_NAME))
 
 
 @click.command('new')
@@ -59,7 +59,7 @@ def new_command():
         click.echo("waiting for create new database {}".format(dots))
         sleep(0.2)
         print(u"{}[2J{}[;H".format(chr(27), chr(27)))
-    mysql_cursor.execute("CREATE DATABASE {}".format(mysql_db))
+    mysql_cursor.execute("CREATE DATABASE {}".format(DATABASE_NAME))
     os.system("flask db init")
     os.system("flask db migrate")
     os.system("flask db upgrade")

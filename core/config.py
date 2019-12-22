@@ -1,13 +1,18 @@
 import os
+from os.path import join
+from dotenv import load_dotenv
 
-mysql_user = 'rhyanz46'
-mysql_pass = 'a'
-mysql_host = 'localhost'
-mysql_db = 'sangkareang'
+dotenv_path = join(os.getcwd(), '.env')
+load_dotenv(dotenv_path)
+
+DATABASE_HOST = os.environ.get("DATABASE_HOST")
+DATABASE_USER = os.environ.get("DATABASE_USER")
+DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD")
+DATABASE_NAME = os.environ.get("DATABASE_NAME")
 
 config = {
     'SQLALCHEMY_DATABASE_URI': 'mysql://{}:{}@{}/{}'.
-        format(mysql_user, mysql_pass, mysql_host, mysql_db),
+        format(DATABASE_USER, DATABASE_PASSWORD, DATABASE_HOST, DATABASE_NAME),
     'SQLALCHEMY_TRACK_MODIFICATIONS': False,
     'SECRET_KEY': 'keren',
     'APPLICATION_ROOT': os.getcwd()
