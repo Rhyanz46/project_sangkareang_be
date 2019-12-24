@@ -34,8 +34,8 @@ class ValueChecker:
                     }
                     abort(result(msg, 400))
             else:
-                return self.__parsed.update({field: value})
-
+                if isinstance(None, type(value)):
+                    return self.__parsed.update({field: value})
             if field_type == date:
                 try:
                     value = datetime.strptime(value, "%d-%m-%Y").date()
@@ -49,6 +49,7 @@ class ValueChecker:
             else:
                 wrong_type = type(value) != field_type
                 wrong_len = len(str(value)) > length
+
             if wrong_type:
                 msg = {
                     "message": 'field {} it\'s must be {}'.format(field, field_type)
