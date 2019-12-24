@@ -69,40 +69,81 @@ def add_seek():
     seek_data = open('seek_data.json')
     seek_data = json.load(seek_data)
 
-    ca = CategoryAccess(
-        name="root",
-        root_access=True,
-        add_user=True,
-        delete_user=True,
-        edit_user=True,
-        add_job=True,
-        delete_job=True,
-        update_job=True,
-        show_job=True,
-        show_user=True,
-        print_job=True,
-        check_job=True,
-        service_job=True
-    )
+    for user in seek_data['users']:
+        print(user['ca'])
+        ca = CategoryAccess(
+            name=user['ca']['name'],
+            root_access=user['ca']['root_access'],
+            add_user=user['ca']['add_user'],
+            delete_user=user['ca']['delete_user'],
+            edit_user=user['ca']['edit_user'],
+            add_job=user['ca']['add_job'],
+            delete_job=user['ca']['delete_job'],
+            update_job=user['ca']['update_job'],
+            show_job=user['ca']['show_job'],
+            show_user=user['ca']['show_user'],
+            print_job=user['ca']['print_job'],
+            check_job=user['ca']['check_job'],
+            service_job=user['ca']['service_job']
+        )
+        detail = UserDetail(
+            fullname=user['fullname'],
+            address=user['address'],
+            phone_number=user['phone_number'],
+            work_start_time=datetime.strptime(user['work_start_time'], "%d-%m-%Y").date(),
+            activate=user['activate'],
+        )
 
-    detail = UserDetail(
-        fullname=seek_data['user_data']['fullname'],
-        address=seek_data['user_data']['address'],
-        phone_number=seek_data['user_data']['phone_number'],
-        work_start_time=datetime.strptime(seek_data['user_data']['work_start_time'], "%d-%m-%Y").date(),
-        activate=seek_data['user_data']['activate'],
-    )
+        user = User(
+            username=user['username'],
+            email=user['email'],
+            password=user['password'],
+            user_detail=detail
+        )
+        user.commit()
+        ca.users.append(user)
+        ca.commit()
+        click.echo("Add Data Done.!! :)")
 
-    user = User(
-        username=seek_data['user_data']['username'],
-        email=seek_data['user_data']['email'],
-        password=seek_data['user_data']['password'],
-        user_detail=detail
-    )
-    user.commit()
-    ca.users.append(user)
-    ca.commit()
-    click.echo("Add Data Done.!! :)")
+
+@click.command('tess')
+@with_appcontext
+def tessss():
+    from apps.user.models import User, UserDetail
+    from apps.category_access.models import CategoryAccess
+    seek_data = open('seek_data.json')
+    seek_data = json.load(seek_data)
+    for user in seek_data['users']:
+        print(user['ca'])
+        ca = CategoryAccess(
+            name=user['ca']['name'],
+            root_access=user['ca']['root_access'],
+            add_user=user['ca']['add_user'],
+            delete_user=user['ca']['delete_user'],
+            edit_user=user['ca']['edit_user'],
+            add_job=user['ca']['add_job'],
+            delete_job=user['ca']['delete_job'],
+            update_job=user['ca']['update_job'],
+            show_job=user['ca']['show_job'],
+            show_user=user['ca']['show_user'],
+            print_job=user['ca']['print_job'],
+            check_job=user['ca']['check_job'],
+            service_job=user['ca']['service_job']
+        )
+        detail = UserDetail(
+            fullname=user['fullname'],
+            address=user['address'],
+            phone_number=user['phone_number'],
+            work_start_time=datetime.strptime(user['work_start_time'], "%d-%m-%Y").date(),
+            activate=user['activate'],
+        )
+
+        user = User(
+            username=user['username'],
+            email=user['email'],
+            password=user['password'],
+            user_detail=detail
+        )
 
 
 class CLI:
@@ -111,4 +152,5 @@ class CLI:
         app.cli.add_command(reset)
         app.cli.add_command(add_seek)
         app.cli.add_command(new_command)
+        app.cli.add_command(tessss)
 
