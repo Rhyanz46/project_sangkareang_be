@@ -52,4 +52,5 @@ def set_ca_user(ca_id, username):
 
 @bp.route('/userlist/<int:ca_id>', methods=['GET'])
 def get_user_ca_list(ca_id):
-    return users_of_ca(ca_id)
+    page = request.args.get('page')
+    return users_of_ca(ca_id, page)

@@ -120,13 +120,31 @@ def set_user(ca_id, username, data):
 
 
 @jwt_required
-def users_of_ca(ca_id):
+def users_of_ca(ca_id, page):
+    if not page:
+        page = 1
+    try:
+        page = int(page)
+    except:
+        return {"message": "page param must be integer"}, 400
+
     ca = CategoryAccess.query.filter_by(id=ca_id).first()
     if not ca:
         return {"message": "this category permission is not found"}, 400
-    if len(ca.users) <= 0:
+    users = User.query.filter_by(category_access_id=ca_id).paginate(page=page, per_page=1)
+
+    if not users.total:
         return {"message": "no user found at this category permission"}, 400
+
     result = []
-    for item in ca.users:
+    for item in users.items:
         result.append({"user_id": item.id, "username": item.username})
-    return {"data": result}
+
+    meta = {
+        "total_data": users.total,
+        "total_pages": users.pages,
+        "total_data_per_page": users.per_page,
+        "next": "?page={}".format(users.next_num) if users.has_next else None,
+        "prev": "?page={}".format(users.prev_num) if users.has_prev else None
+    }
+    return {"data": result, "meta": meta}
