@@ -70,7 +70,6 @@ def add_seek():
     seek_data = json.load(seek_data)
 
     for user in seek_data['users']:
-        print(user['ca'])
         ca = CategoryAccess(
             name=user['ca']['name'],
             root_access=user['ca']['root_access'],
