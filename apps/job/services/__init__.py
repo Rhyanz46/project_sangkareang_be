@@ -109,22 +109,12 @@ def detail_job(job_id, data=None, mode=None):
         try:
             job.commit()
         except:
-            return {"message": "error to edit, tell you software engineer!!"}, 50
+            return {"message": "error to edit, tell you software engineer!!"}, 500
         return {"message": "success to edit"}
+    if mode == 'delete':
+        try:
+            job.delete()
+        except:
+            return {"message": "error to delete, tell you software engineer!!"}, 500
+        return {"message": "success to delete"}
     return {'data': job.__serialize__()}
-
-
-# @jwt_required
-# def delete_job(id):
-#     user = User.query.filter_by(id=get_jwt_identity()).first()
-#     if not user:
-#         return {"message": "user authentication is wrong"}, 400
-#
-#     job = Job.query.join(User)
-#
-#     ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
-#     if not ca:
-#         return {"message": "you permission is not setup"}, 403
-#
-#     if not ca.update_job:
-#         return {"message": "you not have permission"}, 403
