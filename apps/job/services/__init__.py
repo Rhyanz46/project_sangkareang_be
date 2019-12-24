@@ -84,15 +84,14 @@ def detail_job(job_id, data=None, mode=None):
     if not ca:
         return {"message": "you permission is not setup"}, 403
 
-    if not ca.update_job:
-        return {"message": "you not have permission"}, 403
-
     job = Job.query.filter_by(id=job_id).first()
 
     if not job:
         return {"message": "job is not found"}, 400
 
     if mode == 'edit' and not isinstance(None, type(None)):
+        if not ca.update_job:
+            return {"message": "you not have permission"}, 403
         if not isinstance(None, type(data['name'])):
             job.name = data['name']
         if not isinstance(None, type(data['description'])):
@@ -112,6 +111,8 @@ def detail_job(job_id, data=None, mode=None):
             return {"message": "error to edit, tell you software engineer!!"}, 500
         return {"message": "success to edit"}
     if mode == 'delete':
+        if not ca.delete_job:
+            return {"message": "you not have permission"}, 403
         try:
             job.delete()
         except:

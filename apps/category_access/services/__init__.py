@@ -1,6 +1,7 @@
 from flask_jwt_extended import jwt_required
 from ..models import CategoryAccess
 from apps.user.models import User
+from apps.job.models import user_jobs, Job
 
 
 @jwt_required
@@ -93,39 +94,39 @@ def edit_ca(id, data):
 
 
 @jwt_required
-def set_user(ca_name, user_id, data):
+def set_user(ca_id, username, data):
     action = data['action']
-    user = User.query.filter_by(id=user_id).first()
+    user = User.query.filter_by(username=username).first()
     if not user:
-        return {"message": "user with id : {} is not found".format(user_id)}, 204
-    ca = CategoryAccess.query.filter_by(name=ca_name).first()
+        return {"message": "user {} is not found".format(username)}, 400
+
+    ca = CategoryAccess.query.filter_by(id=ca_id).first()
     if not ca:
-        return {"message": "{} is not found".format(ca_name)}, 204
+        return {"message": "id {} is not found".format(ca_id)}, 400
     if action == "on":
         try:
             ca.users.append(user)
             ca.commit()
         except:
-            return {"message": "error to set {} to {}".format(user.username, ca_name)}, 500
-        return {"message": "success to set {} to {}".format(user.username, ca_name)}
+            return {"message": "error to set {} to {}".format(user.username, ca.name)}, 500
+        return {"message": "success to set {} to {}".format(user.username, ca.name)}
     elif action == "off":
         try:
             ca.users.remove(user)
             ca.commit()
         except:
-            return {"message": "error to unset {} from {}".format(user.username, ca_name)}, 500
-        return {"message": "success to unset {} from {}".format(user.username, ca_name)}
+            return {"message": "error to unset {} from {}".format(user.username, ca_id)}, 500
+        return {"message": "success to unset {} from {}".format(user.username, ca_id)}
 
 
 @jwt_required
-def user_of_ca(ca_name):
-    ca = CategoryAccess.query.filter_by(name=ca_name).first()
+def users_of_ca(ca_id):
+    ca = CategoryAccess.query.filter_by(id=ca_id).first()
     if not ca:
-        return {"message": "this category permission is not found"}, 204
+        return {"message": "this category permission is not found"}, 400
     if len(ca.users) <= 0:
-        return {"message": "no user found at this category permission"}, 204
+        return {"message": "no user found at this category permission"}, 400
     result = []
     for item in ca.users:
         result.append({"user_id": item.id, "username": item.username})
     return {"data": result}
-
