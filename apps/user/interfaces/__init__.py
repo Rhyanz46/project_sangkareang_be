@@ -3,7 +3,7 @@ from flask import Blueprint, request
 
 from core import method_is, parser
 
-from ..services import register, login, update, show_user_detail, user_list
+from ..services import register, login, update, show_user_detail, user_list, delete_user
 
 bp = Blueprint('user', __name__, url_prefix='/user')
 
@@ -36,7 +36,7 @@ def auth():
     return {"message": "waw"}, 200
 
 
-@bp.route('/detail/<string:username>', methods=['PUT', 'GET'])
+@bp.route('/detail/<string:username>', methods=['PUT', 'GET', 'DELETE'])
 def do_update(username):
     data = parser.ValueChecker(request.json)
     data.parse('username', field_type=str, nullable=True, length=30)
@@ -52,6 +52,8 @@ def do_update(username):
         return update(username, data.get_parsed())
     elif method_is('GET'):
         return show_user_detail(username)
+    elif method_is('DELETE'):
+        return delete_user(username)
     return {"message": "waw"}, 200
 
 

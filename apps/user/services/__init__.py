@@ -175,3 +175,30 @@ def show_user_detail(username=None):
 
     return user_target.__serialize__(detail=True), 200
 
+
+@jwt_required
+def delete_user(username):
+    user = User.query.filter_by(id=get_jwt_identity()).first()
+    if not user:
+        return {"message": "user authentication is wrong"}, 400
+
+    if not isinstance(None, type(username)):
+        user_target = User.query.filter_by(username=username).first()
+    else:
+        user_target = user
+
+    ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
+    if not ca:
+        return {"message": "you permission is not setup"}, 403
+
+    if not user_target:
+        return {'error': 'user is not found'}, 402
+
+    if not ca.root_access:
+        return {"message": "this action only for root access"}, 403
+
+    try:
+        user_target.delete()
+    except:
+        return {'error': 'kesalahan saat menghapus, tanyakan masalah ini ke backend'}, 500
+    return {'message': 'berhasil menghapus {}'.format(username)}
