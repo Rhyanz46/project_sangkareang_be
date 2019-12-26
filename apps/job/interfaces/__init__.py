@@ -38,8 +38,13 @@ def job_detail(job_id):
 
 @bp.route('/ca', methods=['POST', 'GET'])
 def job_ca_handler():
-    if method_is('POST'):
-        data = parser.ValueChecker(request.json)
-        data.parse('name', str, length=200)
-        return job_ca(data.get_parsed()['name'])
-    return job_ca_list(request.args.get('page'))
+    if method_is('GET'):
+        return job_ca_list(request.args.get('page'))
+    data = parser.ValueChecker(request.json)
+    data.parse('name', str, length=200)
+    return job_ca(data.get_parsed()['name'])
+
+
+@bp.route('/ca/<string:name>', methods=['DELETE'])
+def job_ca_detail_handler(name):
+    return job_ca(name, mode='delete')

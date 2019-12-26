@@ -124,6 +124,14 @@ def detail_job(job_id, data=None, mode=None):
 @jwt_required
 def job_ca(name, mode=None):
     ca = JobCategory.query.filter_by(name=name).first()
+    if mode == 'delete':
+        if not ca:
+            return {"error": "kategori {} tidak ada".format(name)}, 400
+        try:
+            ca.delete()
+        except:
+            return {"error": "terjadi kesalahan saat menghapus, tanyakan masalah ini ke backend".format(name)}, 500
+        return {"message": "sukses"}
     if ca:
         return {"error": "kategori sudah ada"}, 400
     job_ca_ = JobCategory(
