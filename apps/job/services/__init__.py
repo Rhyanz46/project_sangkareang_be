@@ -1,5 +1,5 @@
 from flask_jwt_extended import get_jwt_identity, jwt_required
-from ..models import Job, user_jobs
+from ..models import Job, user_jobs, JobCategory
 from apps.user.models import User
 from apps.category_access.models import CategoryAccess
 
@@ -119,3 +119,20 @@ def detail_job(job_id, data=None, mode=None):
             return {"message": "error to delete, tell you software engineer!!"}, 500
         return {"message": "success to delete"}
     return {'data': job.__serialize__()}
+
+
+@jwt_required
+def job_ca(name, mode=None):
+    ca = JobCategory.query.filter_by(name=name).first()
+    if ca:
+        return {"error": "kategori sudah ada"}, 400
+    job_ca_ = JobCategory(
+        name=name
+    )
+    try:
+        job_ca_.commit()
+    except:
+        return {"message": "error untuk membuat, "
+                           "perhatikan ketentuan pembuatan "
+                           "kategori apakah sudah benar"}, 500
+    return {"message": "success"}
