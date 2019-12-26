@@ -14,6 +14,11 @@ class ValueChecker:
 
         data_request = self.data_request
         if isinstance(None, self.type):
+            if not nullable:
+                msg = {
+                    "message": 'you have to set a data'
+                }
+                abort(result(msg, 400))
             return self.__parsed.update({field: None})
 
         if enum != None and type(enum) != list:
