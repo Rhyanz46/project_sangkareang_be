@@ -16,6 +16,7 @@ def index():
         data.parse('start_time', date, length=100)
         data.parse('deadline', date, nullable=True, length=100)
         data.parse('status', bool, nullable=True, length=100)
+        data.parse('category_id', int, length=11)
         return create_job(data.get_parsed())
     return my_job_list()
 

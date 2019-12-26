@@ -6,11 +6,15 @@ from apps.category_access.models import CategoryAccess
 
 @jwt_required
 def create_job(data):
+    job_ca_ = JobCategory.query.filter_by(id=data['category_id']).first()
+    if not job_ca_:
+        return {"message": "category id is not found"}, 400
     job = Job(
         name=data['name'],
         description=data['description'],
         start_time=data['start_time'],
-        deadline=data['deadline']
+        deadline=data['deadline'],
+        category_id=data['category_id']
     )
     user = User.query.filter_by(id=get_jwt_identity()).first()
     if not user:
@@ -89,7 +93,11 @@ def detail_job(job_id, data=None, mode=None):
     if not job:
         return {"message": "job is not found"}, 400
 
-    if mode == 'edit' and not isinstance(None, type(None)):
+    if mode == 'edit':
+        one_value = len(list(set(data.values()))) == 1
+        null = isinstance(None, type(list(set(data.values()))[0]))
+        if one_value and null:
+            return {"message": "kamu harus mempunyai data untuk mengedit"}, 400
         if not ca.update_job:
             return {"message": "you not have permission"}, 403
         if not isinstance(None, type(data['name'])):
@@ -103,7 +111,12 @@ def detail_job(job_id, data=None, mode=None):
         if not isinstance(None, type(data['status'])):
             job.status = data['status']
         if not isinstance(None, type(data['done'])):
-            job.done = data['done']
+            if not job.done:
+                job.done = data['done']
+            else:
+                if not ca.root_access:
+                    return {"error": "you can't edit done status for this job :)"}, 400
+                job.done = data['done']
 
         try:
             job.commit()
