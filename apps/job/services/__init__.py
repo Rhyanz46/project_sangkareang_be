@@ -136,3 +136,30 @@ def job_ca(name, mode=None):
                            "perhatikan ketentuan pembuatan "
                            "kategori apakah sudah benar"}, 500
     return {"message": "success"}
+
+
+@jwt_required
+def job_ca_list(page):
+    if not page:
+        page = 1
+    try:
+        page = int(page)
+    except:
+        return {"error": "parameter page must be integer"}, 400
+    job_ca_list_ = JobCategory.query.paginate(per_page=20, page=page)
+
+    if not job_ca_list_.total:
+        return {"message": "no user found at this category permission"}, 400
+
+    result = []
+    for item in job_ca_list_.items:
+        result.append({"user_id": item.id, "name": item.name})
+
+    meta = {
+        "total_data": job_ca_list_.total,
+        "total_pages": job_ca_list_.pages,
+        "total_data_per_page": job_ca_list_.per_page,
+        "next": "?page={}".format(job_ca_list_.next_num) if job_ca_list_.has_next else None,
+        "prev": "?page={}".format(job_ca_list_.prev_num) if job_ca_list_.has_prev else None
+    }
+    return {"data": result, "meta": meta}

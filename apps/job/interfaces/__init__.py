@@ -2,7 +2,7 @@ from datetime import date
 from flask import Blueprint, request
 from core import method_is, parser
 
-from ..services import create_job, my_job_list, detail_job, job_ca
+from ..services import create_job, my_job_list, detail_job, job_ca, job_ca_list
 
 bp = Blueprint('job', __name__, url_prefix='/job')
 
@@ -36,8 +36,10 @@ def job_detail(job_id):
     return detail_job(job_id, data.get_parsed(), mode='edit')
 
 
-@bp.route('/ca', methods=['POST'])
+@bp.route('/ca', methods=['POST', 'GET'])
 def job_ca_handler():
-    data = parser.ValueChecker(request.json)
-    data.parse('name', str, length=200)
-    return job_ca(data.get_parsed()['name'])
+    if method_is('POST'):
+        data = parser.ValueChecker(request.json)
+        data.parse('name', str, length=200)
+        return job_ca(data.get_parsed()['name'])
+    return job_ca_list(request.args.get('page'))
