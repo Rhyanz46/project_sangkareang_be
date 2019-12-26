@@ -3,7 +3,7 @@ from flask import Blueprint, request
 
 from core import method_is, parser
 
-from ..services import register, login, update, show_user_detail
+from ..services import register, login, update, show_user_detail, user_list
 
 bp = Blueprint('user', __name__, url_prefix='/user')
 
@@ -53,3 +53,9 @@ def do_update(username):
     elif method_is('GET'):
         return show_user_detail(username)
     return {"message": "waw"}, 200
+
+
+@bp.route('/list', methods=['GET'])
+def list_():
+    page = request.args.get('page')
+    return user_list(page)

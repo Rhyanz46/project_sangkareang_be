@@ -3,6 +3,8 @@ from ..models import User, UserDetail
 from apps.category_access.models import CategoryAccess
 from datetime import timedelta
 
+from .list import user_list
+
 expires = timedelta(days=1)
 
 
