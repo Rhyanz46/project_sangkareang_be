@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="seri">
+    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="dea">
+      <change afterPath="$PROJECT_DIR$/apps/job/models/category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/job/models/history.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/job/models/sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rhyanz46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rhyanz46.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/services/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/parser/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -77,15 +82,15 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/apps/file" />
       <recent name="$PROJECT_DIR$/apps/category" />
       <recent name="$PROJECT_DIR$/apps/comment" />
-      <recent name="$PROJECT_DIR$/apps/post" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/core" />
     </key>
   </component>
   <component name="RunManager">
@@ -186,7 +191,16 @@
       <workItem from="1576805182717" duration="140000" />
       <workItem from="1576938015446" duration="972000" />
       <workItem from="1576939526045" duration="813000" />
-      <workItem from="1576940765015" duration="1406000" />
+      <workItem from="1576940765015" duration="4605000" />
+      <workItem from="1576991603423" duration="20431000" />
+      <workItem from="1577073361102" duration="581000" />
+      <workItem from="1577167580597" duration="5302000" />
+      <workItem from="1577179683885" duration="14869000" />
+      <workItem from="1577198349065" duration="225000" />
+      <workItem from="1577198597839" duration="1663000" />
+      <workItem from="1577254817425" duration="3051000" />
+      <workItem from="1577330552869" duration="498000" />
+      <workItem from="1577353825944" duration="1912000" />
     </task>
     <task id="LOCAL-00001" summary="start all models">
       <created>1569333343722</created>
@@ -328,7 +342,175 @@
       <option name="project" value="LOCAL" />
       <updated>1576586280495</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="set config from .env">
+      <created>1576996639807</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576996639807</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update req.txt">
+      <created>1576996733330</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1576996733330</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixing user ca_name after login">
+      <created>1576999355777</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1576999355778</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update req and wsgi">
+      <created>1577002223057</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1577002223057</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add install script">
+      <created>1577002969476</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1577002969476</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update install script">
+      <created>1577003184889</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1577003184889</updated>
+    </task>
+    <task id="LOCAL-00027" summary="create supervisor conf">
+      <created>1577004850602</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1577004850602</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixing create_supervisor_conf.py">
+      <created>1577004992171</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1577004992171</updated>
+    </task>
+    <task id="LOCAL-00029" summary="finishing installation">
+      <created>1577005877588</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1577005877588</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add nginx service">
+      <created>1577007178977</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1577007178977</updated>
+    </task>
+    <task id="LOCAL-00031" summary="finishing install script">
+      <created>1577009122585</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1577009122585</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add ca to seek data">
+      <created>1577010561911</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1577010561911</updated>
+    </task>
+    <task id="LOCAL-00033" summary="show my details">
+      <created>1577023110077</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1577023110077</updated>
+    </task>
+    <task id="LOCAL-00034" summary="show ca list with details">
+      <created>1577023378857</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1577023378857</updated>
+    </task>
+    <task id="LOCAL-00035" summary="get by id ca">
+      <created>1577029610493</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1577029610493</updated>
+    </task>
+    <task id="LOCAL-00036" summary="dea">
+      <created>1577029716483</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1577029716483</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add new seek data">
+      <created>1577168823809</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1577168823809</updated>
+    </task>
+    <task id="LOCAL-00038" summary="remove print">
+      <created>1577168978305</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1577168978306</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fixing parser">
+      <created>1577170483111</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1577170483111</updated>
+    </task>
+    <task id="LOCAL-00040" summary="get detail a job">
+      <created>1577171320068</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1577171320068</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add delete method to job">
+      <created>1577171873950</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1577171873950</updated>
+    </task>
+    <task id="LOCAL-00042" summary="set user permission, and get users of a permission">
+      <created>1577181718958</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1577181718958</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add meta data result">
+      <created>1577185288156</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1577185288156</updated>
+    </task>
+    <task id="LOCAL-00044" summary="show all users">
+      <created>1577355589736</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1577355589736</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,91 +530,100 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="start all models" />
-    <MESSAGE value="make my own request parser" />
-    <MESSAGE value="rename variable" />
-    <MESSAGE value="remove looping" />
-    <MESSAGE value="nullable checker for parser, and change method to get value of parsed" />
-    <MESSAGE value="add some modules" />
-    <MESSAGE value="relationship table" />
-    <MESSAGE value="done for register" />
-    <MESSAGE value="add seek data" />
-    <MESSAGE value="__serialize__ object" />
-    <MESSAGE value="fixing endpoint" />
-    <MESSAGE value="add category access" />
-    <MESSAGE value="add category" />
-    <MESSAGE value="finishing edit category access" />
-    <MESSAGE value="setting user permission done!!!!" />
-    <MESSAGE value="fixing some bug and add get_user_ca_list" />
-    <MESSAGE value="set relationship for user jobs" />
-    <MESSAGE value="create my job" />
-    <MESSAGE value="edit job" />
     <MESSAGE value="full_edit_user" />
-    <option name="LAST_COMMIT_MESSAGE" value="full_edit_user" />
+    <MESSAGE value="set config from .env" />
+    <MESSAGE value="update req.txt" />
+    <MESSAGE value="fixing user ca_name after login" />
+    <MESSAGE value="update req and wsgi" />
+    <MESSAGE value="add install script" />
+    <MESSAGE value="update install script" />
+    <MESSAGE value="create supervisor conf" />
+    <MESSAGE value="fixing create_supervisor_conf.py" />
+    <MESSAGE value="finishing installation" />
+    <MESSAGE value="add nginx service" />
+    <MESSAGE value="finishing install script" />
+    <MESSAGE value="add ca to seek data" />
+    <MESSAGE value="show my details" />
+    <MESSAGE value="show ca list with details" />
+    <MESSAGE value="get by id ca" />
+    <MESSAGE value="dea" />
+    <MESSAGE value="add new seek data" />
+    <MESSAGE value="remove print" />
+    <MESSAGE value="fixing parser" />
+    <MESSAGE value="get detail a job" />
+    <MESSAGE value="add delete method to job" />
+    <MESSAGE value="set user permission, and get users of a permission" />
+    <MESSAGE value="add meta data result" />
+    <MESSAGE value="show all users" />
+    <option name="LAST_COMMIT_MESSAGE" value="show all users" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="282" y="48" key="#Inspections/0.24.1366.744@0.24.1366.744" timestamp="1575932629033" />
-    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576939538685">
+    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577022796841">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1576939538685" />
-    <state x="252" y="24" key="CommitChangelistDialog2" timestamp="1576586280019">
+    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1577022796841" />
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1577355797393">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="252" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1576586280019" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1577355797393" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.24.1366.744@0.24.1366.744" timestamp="1575989736023" />
-    <state x="136" y="86" width="1092" height="595" key="DiffContextDialog" timestamp="1576586276527">
+    <state x="136" y="86" width="1092" height="595" key="DiffContextDialog" timestamp="1577355769664">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="136" y="86" width="1092" height="595" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1576586276527" />
+    <state x="136" y="86" width="1092" height="595" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1577355769664" />
     <state x="470" y="147" key="FileChooserDialogImpl" timestamp="1575990055193">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="147" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1575990055193" />
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1576947523070">
+    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1577331050565">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.bottom/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1576947523070" />
-    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1576947523069">
+    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1577331050565" />
+    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1577331050564">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.center/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1576947523069" />
-    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1576947523068">
+    <state width="1320" height="184" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1577331050564" />
+    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1577331050564">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.left/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1576947523068" />
-    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1576947523069">
+    <state width="1320" height="184" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1577331050564" />
+    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1577331050565">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.right/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1576947523069" />
+    <state width="1320" height="184" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1577331050565" />
     <state x="1535" y="24" key="SettingsEditor" timestamp="1576334957392">
       <screen x="1360" y="0" width="1360" height="768" />
     </state>
     <state x="1535" y="24" key="SettingsEditor/0.24.1360.744/1360.0.1360.768@1360.0.1360.768" timestamp="1576334957392" />
     <state x="176" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1576283815213" />
-    <state x="470" y="92" key="VCS.ChangeListViewerDialog" timestamp="1576186667770">
+    <state x="470" y="92" key="VCS.ChangeListViewerDialog" timestamp="1577171755651">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1576186667770" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1576586283081">
+    <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1577185290736">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1576586283081" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1576940779416">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1577185290736" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1577330700432">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="342" y="211" key="com.intellij.ide.util.TipDialog/0.24.1360.744/1360.0.1360.768@0.24.1360.744" timestamp="1576334705827" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1576940779416" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1577330700432" />
+    <state x="250" y="81" width="866" height="606" key="find.popup" timestamp="1577009630400">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="250" y="81" width="866" height="606" key="find.popup/0.24.1366.744@0.24.1366.744" timestamp="1577009630399" />
     <state x="314" y="180" key="git4idea.merge.GitPullDialog" timestamp="1575898341831">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -445,6 +636,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Liqolabs$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1569436606776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Liqolabs$Liqolabs.coverage" NAME="Liqolabs Coverage Results" MODIFIED="1569251319119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sangkareang$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1576940782288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sangkareang$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1577353906925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
