@@ -34,6 +34,7 @@ def job_detail(job_id):
         return detail_job(job_id)
     if method_is('DELETE'):
         return detail_job(job_id, mode='delete')
+
     data = parser.ValueChecker(request.json)
     data.parse('name', str, nullable=True, length=100)
     data.parse('description', str, nullable=True, length=300)
