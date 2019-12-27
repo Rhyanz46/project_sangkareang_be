@@ -51,7 +51,8 @@ def store_data_user(data):
         username=data['username'],
         email=data['email'],
         password=data['password'],
-        user_detail=detail
+        user_detail=detail,
+        category_access_id=data['category_access_id']
     )
     try:
         user.commit()

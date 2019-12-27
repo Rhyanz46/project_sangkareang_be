@@ -18,6 +18,7 @@ def index():
     data.parse('phone_number', field_type=int, length=30)
     data.parse('work_start_time', field_type=date, length=30)
     data.parse('activate', field_type=bool, length=30)
+    data.parse('category_access_id', field_type=int, length=30)
     data.parse('password', field_type=str, length=30)
 
     if method_is('POST'):
