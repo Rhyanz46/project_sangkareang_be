@@ -18,11 +18,13 @@ class Job(db.Model):
     start_time = db.Column(db.Date, default=datetime.now())
     deadline = db.Column(db.Date)
     done = db.Column(db.Boolean, default=False)
-    nilai = db.Column(db.String(255))
+
+    nilai_material = db.Column(db.String(255))
+    nilai_jasa = db.Column(db.String(255))
 
     job_location = db.Column(db.String(255))
     no_spk = db.Column(db.String(255))
-    created_by = db.Column(db.Integer, db.ForeignKey("user.id"))
+    given_by = db.Column(db.String(255))
     category_id = db.Column(db.Integer, db.ForeignKey("job_category.id"))
 
     sub_job = db.relationship(SubJob, backref='job')
@@ -43,8 +45,13 @@ class Job(db.Model):
             "start_time": self.start_time,
             "deadline": self.deadline,
             "done": self.done,
+            "given_by": self.given_by,
             "job_location": self.job_location,
             "no_spk": self.no_spk,
+            "nilai": {
+                "material": self.nilai_material,
+                "jasa": self.nilai_jasa
+            },
             "category": {
                 "id": self.category_id,
                 "name": job_ca_name

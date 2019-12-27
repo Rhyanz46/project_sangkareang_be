@@ -14,6 +14,11 @@ def create_job(data):
         description=data['description'],
         start_time=data['start_time'],
         deadline=data['deadline'],
+        nilai_material=data['nilai_material'],
+        nilai_jasa=data['nilai_jasa'],
+        job_location=data['job_location'],
+        no_spk=data['no_spk'],
+        given_by=data['given_by'],
         category_id=data['category_id']
     )
     user = User.query.filter_by(id=get_jwt_identity()).first()
@@ -108,8 +113,11 @@ def detail_job(job_id, data=None, mode=None):
             job.start_time = data['start_time']
         if not isinstance(None, type(data['deadline'])):
             job.deadline = data['deadline']
-        if not isinstance(None, type(data['status'])):
-            job.status = data['status']
+        if not isinstance(None, type(data['category_id'])):
+            job_ca_ = JobCategory.query.filter_by(id=data['category_id']).first()
+            if not job_ca_:
+                return {"message": "category id is not found"}, 400
+            job.category_id = data['category_id']
         if not isinstance(None, type(data['done'])):
             if not job.done:
                 job.done = data['done']
@@ -135,7 +143,7 @@ def detail_job(job_id, data=None, mode=None):
 
 
 @jwt_required
-def job_ca(name, mode=None):
+def job_cat(name, mode='create'):
     ca = JobCategory.query.filter_by(name=name).first()
     if mode == 'delete':
         if not ca:
@@ -160,27 +168,27 @@ def job_ca(name, mode=None):
 
 
 @jwt_required
-def job_ca_list(page):
+def job_cat_list(page):
     if not page:
         page = 1
     try:
         page = int(page)
     except:
         return {"error": "parameter page must be integer"}, 400
-    job_ca_list_ = JobCategory.query.paginate(per_page=20, page=page)
+    job_cat_list_ = JobCategory.query.paginate(per_page=20, page=page)
 
-    if not job_ca_list_.total:
-        return {"message": "no user found at this category permission"}, 400
+    if not job_cat_list_.total:
+        return {"message": "job category is empty"}, 204
 
     result = []
-    for item in job_ca_list_.items:
-        result.append({"user_id": item.id, "name": item.name})
+    for item in job_cat_list_.items:
+        result.append({"id": item.id, "name": item.name})
 
     meta = {
-        "total_data": job_ca_list_.total,
-        "total_pages": job_ca_list_.pages,
-        "total_data_per_page": job_ca_list_.per_page,
-        "next": "?page={}".format(job_ca_list_.next_num) if job_ca_list_.has_next else None,
-        "prev": "?page={}".format(job_ca_list_.prev_num) if job_ca_list_.has_prev else None
+        "total_data": job_cat_list_.total,
+        "total_pages": job_cat_list_.pages,
+        "total_data_per_page": job_cat_list_.per_page,
+        "next": "?page={}".format(job_cat_list_.next_num) if job_cat_list_.has_next else None,
+        "prev": "?page={}".format(job_cat_list_.prev_num) if job_cat_list_.has_prev else None
     }
     return {"data": result, "meta": meta}
