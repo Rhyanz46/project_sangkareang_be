@@ -30,7 +30,10 @@ def user_list(page):
 
     result = []
     for user in users.items:
-        result.append(user.__serialize__(True))
+        ca_ = CategoryAccess.query.filter_by(id=user.category_access_id).first()
+        data = user.__serialize__(True)
+        data.update({"category_access_name": ca_.name})
+        result.append(data)
 
     meta = {
         "total_data": users.total,
