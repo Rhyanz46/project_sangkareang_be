@@ -43,8 +43,14 @@ def create_job(data):
     if job_not_done_exist:
         return {"message": "you must finish '{}' job first, to create new one with same name".format(job.name)}, 400
 
+    if not isinstance(None, type(data['users'])):
+        for user_id in data['users']:
+            user_ = User.query.filter_by(id=user_id).first()
+            if not user_:
+                return {"error": "user id {} is not found".format(user_id)}
+            job.users.append(user_)
+
     try:
-        job.users.append(user)
         job.commit()
     except:
         return {"message": "failed to save job, tell you software engineer"}, 500

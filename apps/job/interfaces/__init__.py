@@ -24,6 +24,8 @@ def index():
         data.parse('no_spk', str, nullable=True, length=255)
         data.parse('given_by', str, length=255)
         data.parse('category_id', int, length=11)
+
+        data.parse('users', list, nullable=True)
         return create_job(data.get_parsed())
     return my_job_list()
 
