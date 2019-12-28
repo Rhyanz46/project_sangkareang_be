@@ -221,11 +221,14 @@ def users_of_job(job_id):
         .join(Job)\
         .filter(Job.id == job_id)
 
-    if not users.first():
-        return {"message": "tidak ada anggota yang mengambil pekerjaan ini"}, 402
-
     result = []
-    for user_ in users:
-        result.append({'id': user_.id, "username": user_.username})
 
-    return {"data": result}
+    if not users.first():
+        result = None
+    else:
+        for user_ in users:
+            result.append({'id': user_.id, "username": user_.username})
+
+    job_detail = {"job": job.__serialize__(), "users": result}
+
+    return {"data": job_detail}
