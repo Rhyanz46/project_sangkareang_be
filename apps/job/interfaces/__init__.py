@@ -2,7 +2,7 @@ from datetime import date
 from flask import Blueprint, request
 from core import method_is, parser
 
-from ..services import create_job, my_job_list, detail_job, job_cat, job_cat_list
+from ..services import create_job, my_job_list, detail_job, job_cat, job_cat_list, users_of_job
 
 bp = Blueprint('job', __name__, url_prefix='/job')
 
@@ -58,3 +58,8 @@ def job_cat_handler():
 @bp.route('/category/<string:name>', methods=['DELETE'])
 def job_cat_detail_handler(name):
     return job_cat(name, mode='delete')
+
+
+@bp.route('<int:job_id>/users', methods=['PUT', 'GET', 'DELETE'])
+def job_users(job_id):
+    return users_of_job(job_id)

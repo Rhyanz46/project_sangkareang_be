@@ -198,3 +198,34 @@ def job_cat_list(page):
         "prev": "?page={}".format(job_cat_list_.prev_num) if job_cat_list_.has_prev else None
     }
     return {"data": result, "meta": meta}
+
+
+@jwt_required
+def users_of_job(job_id):
+    user = User.query.filter_by(id=get_jwt_identity()).first()
+    if not user:
+        return {"message": "user authentication is wrong"}, 400
+
+    ca = CategoryAccess.query.filter_by(id=user.category_access_id).first()
+    if not ca:
+        return {"message": "you permission is not setup"}, 403
+
+    job = Job.query.filter_by(id=job_id).first()
+
+    if not job:
+        return {"message": "job is not found"}, 400
+
+    users = User\
+        .query\
+        .join(user_jobs)\
+        .join(Job)\
+        .filter(Job.id == job_id)
+
+    if not users.first():
+        return {"message": "tidak ada anggota yang mengambil pekerjaan ini"}, 402
+
+    result = []
+    for user_ in users:
+        result.append({'id': user_.id, "username": user_.username})
+
+    return {"data": result}
