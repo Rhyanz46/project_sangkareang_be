@@ -10,6 +10,8 @@ bp = Blueprint('user', __name__, url_prefix='/user')
 
 @bp.route('', methods=['GET', 'POST'])
 def index():
+    if method_is('GET'):
+        return show_user_detail()
     data = parser.ValueChecker(request.json)
     data.parse('username', field_type=str, length=30)
     data.parse('email', field_type=str, length=30)
@@ -20,10 +22,7 @@ def index():
     data.parse('activate', field_type=bool, length=30)
     data.parse('category_access_id', field_type=int, length=30)
     data.parse('password', field_type=str, length=30)
-
-    if method_is('POST'):
-        return register(data.get_parsed())
-    return show_user_detail()
+    return register(data.get_parsed())
 
 
 @bp.route('/auth', methods=['GET', 'POST'])
