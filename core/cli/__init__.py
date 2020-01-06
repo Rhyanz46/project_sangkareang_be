@@ -105,9 +105,17 @@ def add_seek():
         click.echo("Add Data Done.!! :)")
 
 
+@click.command('test')
+@with_appcontext
+def testing():
+    from os import system
+    system("coverage run -m pytest -vs")
+
+
 class CLI:
     @staticmethod
     def init_app(app):
         app.cli.add_command(reset)
         app.cli.add_command(add_seek)
         app.cli.add_command(new_command)
+        app.cli.add_command(testing)

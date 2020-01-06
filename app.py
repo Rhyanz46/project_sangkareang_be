@@ -6,8 +6,10 @@ from flask_jwt_extended import JWTManager
 from core.config import config
 
 
-def create_app():
+def create_app(test_config=None):
     app = Flask(__name__)
+    if test_config is not None:
+        app.config.from_mapping(test_config)
     app.config.from_mapping(config)
 
     from core.cli import CLI

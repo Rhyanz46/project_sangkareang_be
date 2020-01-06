@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="dea">
-      <change afterPath="$PROJECT_DIR$/apps/job/models/category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/job/models/history.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/job/models/sub.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="create a job with category">
+      <change afterPath="$PROJECT_DIR$/apps/job/services/tesss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rhyanz46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rhyanz46.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/job/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/cli/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cli/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +29,27 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="sangkareang" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,15 +102,15 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/core" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/apps/file" />
       <recent name="$PROJECT_DIR$/apps/category" />
       <recent name="$PROJECT_DIR$/apps/comment" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,6 +169,7 @@
         </serviceView>
       </list>
     </option>
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -200,91 +221,32 @@
       <workItem from="1577198597839" duration="1663000" />
       <workItem from="1577254817425" duration="3051000" />
       <workItem from="1577330552869" duration="498000" />
-      <workItem from="1577353825944" duration="1912000" />
-    </task>
-    <task id="LOCAL-00001" summary="start all models">
-      <created>1569333343722</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1569333343723</updated>
-    </task>
-    <task id="LOCAL-00002" summary="make my own request parser">
-      <created>1569433247964</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1569433247964</updated>
-    </task>
-    <task id="LOCAL-00003" summary="rename variable">
-      <created>1569433387499</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1569433387499</updated>
-    </task>
-    <task id="LOCAL-00004" summary="remove looping">
-      <created>1569434670804</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1569434670804</updated>
-    </task>
-    <task id="LOCAL-00005" summary="nullable checker for parser, and change method to get value of parsed">
-      <created>1569437370578</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1569437370578</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add some modules">
-      <created>1575898336471</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1575898336471</updated>
-    </task>
-    <task id="LOCAL-00007" summary="relationship table">
-      <created>1575898494602</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1575898494602</updated>
-    </task>
-    <task id="LOCAL-00008" summary="done for register">
-      <created>1575908396177</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1575908396177</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add seek data">
-      <created>1575911159587</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1575911159587</updated>
-    </task>
-    <task id="LOCAL-00010" summary="__serialize__ object">
-      <created>1575936451679</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1575936451679</updated>
-    </task>
-    <task id="LOCAL-00011" summary="fixing endpoint">
-      <created>1575938091785</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1575938091785</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add category access">
-      <created>1576033280161</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1576033280161</updated>
+      <workItem from="1577353825944" duration="15824000" />
+      <workItem from="1577413181541" duration="3852000" />
+      <workItem from="1577426528716" duration="24000" />
+      <workItem from="1577460412372" duration="2571000" />
+      <workItem from="1577505823534" duration="62000" />
+      <workItem from="1577514723719" duration="2895000" />
+      <workItem from="1577525531244" duration="723000" />
+      <workItem from="1577537764954" duration="5164000" />
+      <workItem from="1577569862799" duration="680000" />
+      <workItem from="1577580837877" duration="3468000" />
+      <workItem from="1577600042473" duration="6514000" />
+      <workItem from="1577677539687" duration="3601000" />
+      <workItem from="1577695602882" duration="7019000" />
+      <workItem from="1577710600832" duration="919000" />
+      <workItem from="1577715495030" duration="33256000" />
+      <workItem from="1577930862156" duration="3832000" />
+      <workItem from="1577936707259" duration="8077000" />
+      <workItem from="1578017148532" duration="611000" />
+      <workItem from="1578034302578" duration="113000" />
+      <workItem from="1578035771626" duration="5556000" />
+      <workItem from="1578060400060" duration="53000" />
+      <workItem from="1578105272782" duration="25000" />
+      <workItem from="1578105312445" duration="1990000" />
+      <workItem from="1578109096320" duration="2243000" />
+      <workItem from="1578137550532" duration="99000" />
+      <workItem from="1578275049189" duration="4015000" />
     </task>
     <task id="LOCAL-00013" summary="add category">
       <created>1576070632159</created>
@@ -510,7 +472,126 @@
       <option name="project" value="LOCAL" />
       <updated>1577355589736</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="move to separate models">
+      <created>1577355797580</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1577355797580</updated>
+    </task>
+    <task id="LOCAL-00046" summary="dea">
+      <created>1577355819827</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1577355819828</updated>
+    </task>
+    <task id="LOCAL-00047" summary="delete a user">
+      <created>1577357138035</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1577357138035</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fixing parser">
+      <created>1577359815501</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1577359815501</updated>
+    </task>
+    <task id="LOCAL-00049" summary="create job category">
+      <created>1577360448942</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1577360448942</updated>
+    </task>
+    <task id="LOCAL-00050" summary="show job ca list">
+      <created>1577361372174</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1577361372175</updated>
+    </task>
+    <task id="LOCAL-00051" summary="delete a job">
+      <created>1577364979125</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1577364979125</updated>
+    </task>
+    <task id="LOCAL-00052" summary="create a job with category">
+      <created>1577369529943</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1577369529943</updated>
+    </task>
+    <task id="LOCAL-00053" summary="create a job with category">
+      <created>1577415141530</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1577415141531</updated>
+    </task>
+    <task id="LOCAL-00054" summary="a">
+      <created>1577415220649</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1577415220649</updated>
+    </task>
+    <task id="LOCAL-00055" summary="create a user with category access id">
+      <created>1577460653133</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1577460653138</updated>
+    </task>
+    <task id="LOCAL-00056" summary="show user CA">
+      <created>1577462615772</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1577462615772</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add users of a job">
+      <created>1577539803802</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1577539803803</updated>
+    </task>
+    <task id="LOCAL-00058" summary="show users of a job">
+      <created>1577542061563</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1577542061563</updated>
+    </task>
+    <task id="LOCAL-00059" summary="add detail job while show users job">
+      <created>1577542842075</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1577542842075</updated>
+    </task>
+    <task id="LOCAL-00060" summary="testing">
+      <created>1577698331453</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1577698331454</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fix bug for user">
+      <created>1577711493045</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1577711493045</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,112 +611,120 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="full_edit_user" />
-    <MESSAGE value="set config from .env" />
-    <MESSAGE value="update req.txt" />
-    <MESSAGE value="fixing user ca_name after login" />
-    <MESSAGE value="update req and wsgi" />
-    <MESSAGE value="add install script" />
-    <MESSAGE value="update install script" />
-    <MESSAGE value="create supervisor conf" />
-    <MESSAGE value="fixing create_supervisor_conf.py" />
-    <MESSAGE value="finishing installation" />
-    <MESSAGE value="add nginx service" />
-    <MESSAGE value="finishing install script" />
-    <MESSAGE value="add ca to seek data" />
-    <MESSAGE value="show my details" />
-    <MESSAGE value="show ca list with details" />
     <MESSAGE value="get by id ca" />
-    <MESSAGE value="dea" />
     <MESSAGE value="add new seek data" />
     <MESSAGE value="remove print" />
-    <MESSAGE value="fixing parser" />
     <MESSAGE value="get detail a job" />
     <MESSAGE value="add delete method to job" />
     <MESSAGE value="set user permission, and get users of a permission" />
     <MESSAGE value="add meta data result" />
     <MESSAGE value="show all users" />
-    <option name="LAST_COMMIT_MESSAGE" value="show all users" />
+    <MESSAGE value="move to separate models" />
+    <MESSAGE value="dea" />
+    <MESSAGE value="delete a user" />
+    <MESSAGE value="fixing parser" />
+    <MESSAGE value="create job category" />
+    <MESSAGE value="show job ca list" />
+    <MESSAGE value="delete a job" />
+    <MESSAGE value="create a job with category" />
+    <MESSAGE value="d" />
+    <MESSAGE value="a" />
+    <MESSAGE value="create a user with category access id" />
+    <MESSAGE value="show user CA" />
+    <MESSAGE value="add users of a job" />
+    <MESSAGE value="show users of a job" />
+    <MESSAGE value="add detail job while show users job" />
+    <MESSAGE value="testing" />
+    <MESSAGE value="fix bug for user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug for user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="282" y="48" key="#Inspections/0.24.1366.744@0.24.1366.744" timestamp="1575932629033" />
-    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577022796841">
+    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577943900055">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1577022796841" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1577355797393">
+    <state x="146" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943900055" />
+    <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1577943894922">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1577355797393" />
+    <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578280851391">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578280851391" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.24.1366.744@0.24.1366.744" timestamp="1575989736023" />
-    <state x="136" y="86" width="1092" height="595" key="DiffContextDialog" timestamp="1577355769664">
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1577777811819">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="136" y="86" width="1092" height="595" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1577355769664" />
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1577777811819" />
     <state x="470" y="147" key="FileChooserDialogImpl" timestamp="1575990055193">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="147" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1575990055193" />
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom" timestamp="1577331050565">
+    <state width="1320" height="248" key="GridCell.Tab.0.bottom" timestamp="1578280609557">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.bottom/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1577331050565" />
-    <state width="1320" height="184" key="GridCell.Tab.0.center" timestamp="1577331050564">
+    <state width="1320" height="248" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578280609557" />
+    <state width="1320" height="248" key="GridCell.Tab.0.center" timestamp="1578280609557">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.center/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1577331050564" />
-    <state width="1320" height="184" key="GridCell.Tab.0.left" timestamp="1577331050564">
+    <state width="1320" height="248" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578280609557" />
+    <state width="1320" height="248" key="GridCell.Tab.0.left" timestamp="1578280609556">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.left/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1577331050564" />
-    <state width="1320" height="184" key="GridCell.Tab.0.right" timestamp="1577331050565">
+    <state width="1320" height="248" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578280609556" />
+    <state width="1320" height="248" key="GridCell.Tab.0.right" timestamp="1578280609557">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.right/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="184" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1577331050565" />
-    <state x="1535" y="24" key="SettingsEditor" timestamp="1576334957392">
-      <screen x="1360" y="0" width="1360" height="768" />
+    <state width="1320" height="248" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578280609557" />
+    <state x="176" y="24" key="SettingsEditor" timestamp="1577719068603">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="1535" y="24" key="SettingsEditor/0.24.1360.744/1360.0.1360.768@1360.0.1360.768" timestamp="1576334957392" />
-    <state x="176" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1576283815213" />
+    <state x="176" y="24" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1577719068603" />
     <state x="470" y="92" key="VCS.ChangeListViewerDialog" timestamp="1577171755651">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1577185290736">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1577711496014">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1577185290736" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1577330700432">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1577711496014" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578109140496">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="342" y="211" key="com.intellij.ide.util.TipDialog/0.24.1360.744/1360.0.1360.768@0.24.1360.744" timestamp="1576334705827" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1577330700432" />
-    <state x="250" y="81" width="866" height="606" key="find.popup" timestamp="1577009630400">
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1578109140496" />
+    <state x="455" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578279947548">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="250" y="81" width="866" height="606" key="find.popup/0.24.1366.744@0.24.1366.744" timestamp="1577009630399" />
-    <state x="314" y="180" key="git4idea.merge.GitPullDialog" timestamp="1575898341831">
+    <state x="455" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.24.1366.744@0.24.1366.744" timestamp="1578279947548" />
+    <state x="250" y="81" width="866" height="606" key="find.popup" timestamp="1577718982664">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="314" y="180" key="git4idea.merge.GitPullDialog/0.24.1366.744@0.24.1366.744" timestamp="1575898341831" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1575928743020">
+    <state x="250" y="81" width="866" height="606" key="find.popup/0.24.1366.744@0.24.1366.744" timestamp="1577718982664" />
+    <state x="314" y="180" key="git4idea.merge.GitPullDialog" timestamp="1577937830932">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.24.1366.744@0.24.1366.744" timestamp="1575928743020" />
+    <state x="314" y="180" key="git4idea.merge.GitPullDialog/0.24.1366.744@0.24.1366.744" timestamp="1577937830932" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578280409374">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.24.1366.744@0.24.1366.744" timestamp="1578280409374" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Liqolabs$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1569436606776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Liqolabs$Liqolabs.coverage" NAME="Liqolabs Coverage Results" MODIFIED="1569251319119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sangkareang$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1577353906925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sangkareang$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1578280609535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

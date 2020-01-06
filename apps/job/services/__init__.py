@@ -4,6 +4,12 @@ from apps.user.models import User
 from apps.category_access.models import CategoryAccess
 
 
+class _NoneData:
+    def __init__(self):
+        self.total = None
+        self.items = []
+
+
 @jwt_required
 def create_job(data):
     job_ca_ = JobCategory.query.filter_by(id=data['category_id']).first()
@@ -58,7 +64,14 @@ def create_job(data):
 
 
 @jwt_required
-def my_job_list(done=None):
+def my_job_list(page=None):
+    if not page:
+        page = 1
+    try:
+        page = int(page)
+    except:
+        return {"error": "parameter page must be integer"}, 400
+
     user = User.query.filter_by(id=get_jwt_identity()).first()
     if not user:
         return {"message": "user authentication is wrong"}, 400
@@ -67,26 +80,36 @@ def my_job_list(done=None):
     if not ca:
         return {"message": "you permission is not setup"}, 403
 
-    if not ca.show_job:
-        return {"message": "you not have permission"}, 403
+    jobs = _NoneData()
 
-    if isinstance(done, type(None)):
+    if not ca.show_job:
         jobs = Job.query. \
             join(user_jobs). \
             join(User).filter(
                 User.id == user.id
-            )
+            ).paginate(per_page=20, page=page)
 
-        if not jobs.first():
-            return {"message": "you have not jobs"}, 204
+    if ca.show_job or ca.root_access:
+        jobs = Job.query\
+            .paginate(per_page=20, page=page)
 
-        my_jobs = []
+    if not jobs.total:
+        return {"message": "you have not jobs"}, 204
 
-        for job in jobs.all():
-            my_jobs.append(job.__serialize__())
+    my_jobs = []
 
-        return {"data": my_jobs}
-    return {"message": "this feature is not finish"}, 400
+    for job in jobs.items:
+        my_jobs.append(job.__serialize__())
+
+    meta = {
+        "total_data": jobs.total,
+        "total_pages": jobs.pages,
+        "total_data_per_page": jobs.per_page,
+        "next": "?page={}".format(jobs.next_num) if jobs.has_next else None,
+        "prev": "?page={}".format(jobs.prev_num) if jobs.has_prev else None
+    }
+
+    return {"data": my_jobs, "meta": meta}
 
 
 @jwt_required
