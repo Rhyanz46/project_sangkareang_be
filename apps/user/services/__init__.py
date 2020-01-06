@@ -1,5 +1,6 @@
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 from ..models import User, UserDetail
+from apps.job.models import Job, user_jobs
 from apps.category_access.models import CategoryAccess
 from datetime import timedelta
 
@@ -203,3 +204,41 @@ def delete_user(username):
     except:
         return {'error': 'kesalahan saat menghapus, tanyakan masalah ini ke backend'}, 500
     return {'message': 'berhasil menghapus {}'.format(username)}
+
+
+def list_jobs_of_user(username, page):
+    if not page:
+        page = 1
+    try:
+        page = int(page)
+    except:
+        return {"error": "page parameter must be integer"}, 400
+
+    jobs = Job.query\
+        .join(user_jobs)\
+        .join(User)\
+        .filter_by(username=username).paginate(page=page, per_page=20)
+
+    if not jobs.total:
+        return {"message": "no jobs"}, 204
+
+    result = []
+    for item in jobs.items:
+        result.append({
+            "id": item.id,
+            "name": item.name,
+            "done": item.done,
+            "category": {
+                "id": item.job_category.id,
+                "name": item.job_category.name
+            }
+        })
+
+    meta = {
+        "total_data": jobs.total,
+        "total_pages": jobs.pages,
+        "total_data_per_page": jobs.per_page,
+        "next": "?page={}".format(jobs.next_num) if jobs.has_next else None,
+        "prev": "?page={}".format(jobs.prev_num) if jobs.has_prev else None
+    }
+    return {"data": result, "meta": meta}

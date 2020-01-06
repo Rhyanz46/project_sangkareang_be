@@ -3,7 +3,7 @@ from flask import Blueprint, request
 
 from core import method_is, parser
 
-from ..services import register, login, update, show_user_detail, user_list, delete_user
+from ..services import register, login, update, show_user_detail, user_list, delete_user, list_jobs_of_user
 
 bp = Blueprint('user', __name__, url_prefix='/user')
 
@@ -61,3 +61,9 @@ def do_update(username):
 def list_():
     page = request.args.get('page')
     return user_list(page)
+
+
+@bp.route('/detail/<string:username>/jobs', methods=['PUT', 'GET', 'DELETE'])
+def jobs_of_user(username):
+    page = request.args.get('page')
+    return list_jobs_of_user(username, page)

@@ -2,12 +2,7 @@ from flask_jwt_extended import get_jwt_identity, jwt_required
 from ..models import Job, user_jobs, JobCategory
 from apps.user.models import User
 from apps.category_access.models import CategoryAccess
-
-
-class _NoneData:
-    def __init__(self):
-        self.total = None
-        self.items = []
+from core import NoneData
 
 
 @jwt_required
@@ -80,7 +75,7 @@ def job_list(page=None):
     if not ca:
         return {"message": "you permission is not setup"}, 403
 
-    jobs = _NoneData()
+    jobs = NoneData()
 
     if not ca.show_job:
         del jobs

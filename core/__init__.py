@@ -7,3 +7,9 @@ def result(data, code):
 
 def method_is(method):
     return request.method == method.upper()
+
+
+class NoneData:
+    def __init__(self):
+        self.total = None
+        self.items = []
