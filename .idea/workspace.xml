@@ -4,9 +4,10 @@
     <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="create a job with category">
       <change afterPath="$PROJECT_DIR$/apps/job/services/tesss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/category_access/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/category_access/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/interfaces/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/services/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/services/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,14 +243,7 @@
       <workItem from="1578109096320" duration="2243000" />
       <workItem from="1578137550532" duration="99000" />
       <workItem from="1578275049189" duration="8337000" />
-      <workItem from="1578301308265" duration="2083000" />
-    </task>
-    <task id="LOCAL-00017" summary="set relationship for user jobs">
-      <created>1576205874498</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1576205874498</updated>
+      <workItem from="1578301308265" duration="3286000" />
     </task>
     <task id="LOCAL-00018" summary="create my job">
       <created>1576289185679</created>
@@ -587,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578284711532</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="show users by job is accepted">
+      <created>1578303457950</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1578303457951</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +608,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add delete method to job" />
     <MESSAGE value="set user permission, and get users of a permission" />
     <MESSAGE value="add meta data result" />
     <MESSAGE value="show all users" />
@@ -632,7 +632,8 @@
     <MESSAGE value="change method name" />
     <MESSAGE value="delete jobs variabel" />
     <MESSAGE value="show jobs of a user" />
-    <option name="LAST_COMMIT_MESSAGE" value="show jobs of a user" />
+    <MESSAGE value="show users by job is accepted" />
+    <option name="LAST_COMMIT_MESSAGE" value="show users by job is accepted" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -647,42 +648,42 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578284738016">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578303457511">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578284738016" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578303457511" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.24.1366.744@0.24.1366.744" timestamp="1575989736023" />
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578284698096">
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578303432696">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578284698096" />
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578303432696" />
     <state x="470" y="147" key="FileChooserDialogImpl" timestamp="1575990055193">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="147" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1575990055193" />
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1578302342065">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1578304001015">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.bottom/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578302342065" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1578302342064">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578304001015" />
+    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1578304001013">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.center/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578302342064" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1578302342064">
+    <state width="1320" height="173" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578304001013" />
+    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1578304001012">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.left/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578302342064" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1578302342064">
+    <state width="1320" height="173" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578304001012" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1578304001014">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.right/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578302342064" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578304001014" />
     <state x="176" y="24" key="SettingsEditor" timestamp="1577719068603">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

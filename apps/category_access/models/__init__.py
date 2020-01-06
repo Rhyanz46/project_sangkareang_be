@@ -18,6 +18,7 @@ class CategoryAccess(db.Model):
     print_job = db.Column(db.Boolean, default=True)
     check_job = db.Column(db.Boolean, default=True)
     service_job = db.Column(db.Boolean, default=True)
+    accept_job = db.Column(db.Boolean, default=False)
 
     users = db.relationship(User, backref='category_access', lazy=True)
 

@@ -151,6 +151,13 @@ def detail_job(job_id, data=None, mode=None):
                 if not ca.root_access:
                     return {"error": "you can't edit done status for this job :)"}, 400
                 job.done = data['done']
+        if not isinstance(None, type(data['accept'])):
+            if not job.accepted:
+                job.accepted = data['accept']
+            else:
+                if not ca.root_access or not ca.accept_job:
+                    return {"error": "you can't edit accept status for this job :)"}, 400
+                job.accepted = data['accept']
 
         try:
             job.commit()
