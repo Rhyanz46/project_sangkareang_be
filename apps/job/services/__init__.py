@@ -83,6 +83,7 @@ def job_list(page=None):
     jobs = _NoneData()
 
     if not ca.show_job:
+        del jobs
         jobs = Job.query. \
             join(user_jobs). \
             join(User).filter(
@@ -90,6 +91,7 @@ def job_list(page=None):
             ).paginate(per_page=20, page=page)
 
     if ca.show_job or ca.root_access:
+        del jobs
         jobs = Job.query\
             .paginate(per_page=20, page=page)
 
