@@ -42,6 +42,7 @@ def job_detail(job_id):
     data.parse('description', str, nullable=True, length=300)
     data.parse('start_time', date, nullable=True, length=100)
     data.parse('deadline', date, nullable=True, length=100)
+    data.parse('category_id', int, nullable=True, length=3)
     data.parse('done', bool, nullable=True, length=100)
     data.parse('accept', bool, nullable=True, length=100)
     return detail_job(job_id, data.get_parsed(), mode='edit')

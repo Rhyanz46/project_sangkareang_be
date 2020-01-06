@@ -2,6 +2,7 @@ from flask_jwt_extended import get_jwt_identity, jwt_required
 from ..models import User
 from apps.job.models import Job, user_jobs
 from apps.category_access.models import CategoryAccess
+from sqlalchemy import or_
 
 
 @jwt_required
@@ -29,10 +30,9 @@ def user_list(page, job_accept):
             .query\
             .join(user_jobs)\
             .join(Job)\
-            .filter(
-                Job.accepted == False,
-                Job.done == False
-            )\
+            .filter(or_(
+                Job.accepted == False, Job.done == False
+            ))\
             .paginate(page=page, per_page=30)
         if not users.total:
             return {"message": "tidak ada karyawan yang pekerjaannya belum di verifikasi"}, 204

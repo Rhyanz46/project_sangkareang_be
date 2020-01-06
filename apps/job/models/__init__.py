@@ -49,6 +49,7 @@ class Job(db.Model):
             "given_by": self.given_by,
             "job_location": self.job_location,
             "no_spk": self.no_spk,
+            "accepted": self.accepted,
             "nilai": {
                 "material": self.nilai_material,
                 "jasa": self.nilai_jasa

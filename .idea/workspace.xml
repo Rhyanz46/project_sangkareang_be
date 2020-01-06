@@ -4,6 +4,8 @@
     <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="create a job with category">
       <change afterPath="$PROJECT_DIR$/apps/job/services/tesss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/user/services/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/services/list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,14 +242,7 @@
       <workItem from="1578109096320" duration="2243000" />
       <workItem from="1578137550532" duration="99000" />
       <workItem from="1578275049189" duration="8337000" />
-      <workItem from="1578301308265" duration="5074000" />
-    </task>
-    <task id="LOCAL-00021" summary="set config from .env">
-      <created>1576996639807</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1576996639807</updated>
+      <workItem from="1578301308265" duration="5765000" />
     </task>
     <task id="LOCAL-00022" summary="update req.txt">
       <created>1576996733330</created>
@@ -585,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578306709391</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="bug fixing">
+      <created>1578307023886</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1578307023887</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,9 +630,9 @@
     <MESSAGE value="show jobs of a user" />
     <MESSAGE value="show users by job is accepted" />
     <MESSAGE value="accept job" />
-    <MESSAGE value="bug fixing" />
     <MESSAGE value="fixing bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing bugs" />
+    <MESSAGE value="bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -645,10 +647,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578306709136">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578307023663">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578306709136" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578307023663" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -690,10 +692,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578306732039">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578307030572">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578306732039" />
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578307030572" />
     <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578301309064">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
