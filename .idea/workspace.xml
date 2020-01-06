@@ -240,14 +240,7 @@
       <workItem from="1578109096320" duration="2243000" />
       <workItem from="1578137550532" duration="99000" />
       <workItem from="1578275049189" duration="8337000" />
-      <workItem from="1578301308265" duration="3954000" />
-    </task>
-    <task id="LOCAL-00019" summary="edit job">
-      <created>1576421880714</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1576421880714</updated>
+      <workItem from="1578301308265" duration="4766000" />
     </task>
     <task id="LOCAL-00020" summary="full_edit_user">
       <created>1576586280495</created>
@@ -585,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578305313571</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="bug fixing">
+      <created>1578305912580</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1578305912581</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add meta data result" />
     <MESSAGE value="show all users" />
     <MESSAGE value="move to separate models" />
     <MESSAGE value="dea" />
@@ -630,7 +629,8 @@
     <MESSAGE value="show jobs of a user" />
     <MESSAGE value="show users by job is accepted" />
     <MESSAGE value="accept job" />
-    <option name="LAST_COMMIT_MESSAGE" value="accept job" />
+    <MESSAGE value="bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -645,10 +645,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578305313311">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578306334393">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578305313311" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578306334393" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -690,10 +690,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578284745201">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578306337040">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578284745201" />
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578306337040" />
     <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578301309064">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

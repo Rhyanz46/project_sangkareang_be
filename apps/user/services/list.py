@@ -30,8 +30,8 @@ def user_list(page, job_accept):
             .join(user_jobs)\
             .join(Job)\
             .filter(
-                Job.accepted,
-                Job.done
+                not Job.accepted,
+                not Job.done
             )\
             .paginate(page=page, per_page=30)
         if not users.total:
