@@ -18,6 +18,7 @@ class Job(db.Model):
     start_time = db.Column(db.Date, default=datetime.now())
     deadline = db.Column(db.Date)
     done = db.Column(db.Boolean, default=False)
+    accept = db.Column(db.Boolean, default=False)
 
     nilai_material = db.Column(db.String(255))
     nilai_jasa = db.Column(db.String(255))

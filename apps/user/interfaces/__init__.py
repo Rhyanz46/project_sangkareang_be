@@ -60,7 +60,8 @@ def do_update(username):
 @bp.route('/list', methods=['GET'])
 def list_():
     page = request.args.get('page')
-    return user_list(page)
+    job_accept = request.args.get('jobaccept')
+    return user_list(page, job_accept)
 
 
 @bp.route('/detail/<string:username>/jobs', methods=['PUT', 'GET', 'DELETE'])
