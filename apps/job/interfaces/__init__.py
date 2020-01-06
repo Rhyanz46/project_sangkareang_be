@@ -2,7 +2,7 @@ from datetime import date
 from flask import Blueprint, request
 from core import method_is, parser
 
-from ..services import create_job, my_job_list, detail_job, job_cat, job_cat_list, users_of_job
+from ..services import create_job, job_list, detail_job, job_cat, job_cat_list, users_of_job
 
 bp = Blueprint('job', __name__, url_prefix='/job')
 
@@ -27,7 +27,7 @@ def index():
 
         data.parse('users', list, nullable=True)
         return create_job(data.get_parsed())
-    return my_job_list()
+    return job_list()
 
 
 @bp.route('<int:job_id>', methods=['PUT', 'GET', 'DELETE'])

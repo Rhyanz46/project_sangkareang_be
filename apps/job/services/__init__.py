@@ -64,7 +64,7 @@ def create_job(data):
 
 
 @jwt_required
-def my_job_list(page=None):
+def job_list(page=None):
     if not page:
         page = 1
     try:
