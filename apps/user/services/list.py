@@ -30,7 +30,7 @@ def user_list(page, job_accept):
             .join(user_jobs)\
             .join(Job)\
             .filter(
-                Job.accept,
+                Job.accepted,
                 Job.done
             )\
             .paginate(page=page, per_page=30)

@@ -4,10 +4,7 @@
     <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="create a job with category">
       <change afterPath="$PROJECT_DIR$/apps/job/services/tesss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/category_access/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/category_access/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/services/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/services/list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,14 +240,7 @@
       <workItem from="1578109096320" duration="2243000" />
       <workItem from="1578137550532" duration="99000" />
       <workItem from="1578275049189" duration="8337000" />
-      <workItem from="1578301308265" duration="3286000" />
-    </task>
-    <task id="LOCAL-00018" summary="create my job">
-      <created>1576289185679</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1576289185679</updated>
+      <workItem from="1578301308265" duration="3954000" />
     </task>
     <task id="LOCAL-00019" summary="edit job">
       <created>1576421880714</created>
@@ -588,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578303457951</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="accept job">
+      <created>1578305313571</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1578305313571</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="set user permission, and get users of a permission" />
     <MESSAGE value="add meta data result" />
     <MESSAGE value="show all users" />
     <MESSAGE value="move to separate models" />
@@ -633,7 +629,8 @@
     <MESSAGE value="delete jobs variabel" />
     <MESSAGE value="show jobs of a user" />
     <MESSAGE value="show users by job is accepted" />
-    <option name="LAST_COMMIT_MESSAGE" value="show users by job is accepted" />
+    <MESSAGE value="accept job" />
+    <option name="LAST_COMMIT_MESSAGE" value="accept job" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -648,18 +645,18 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578303457511">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578305313311">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578303457511" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578305313311" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.24.1366.744@0.24.1366.744" timestamp="1575989736023" />
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578303432696">
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578305304131">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578303432696" />
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578305304131" />
     <state x="470" y="147" key="FileChooserDialogImpl" timestamp="1575990055193">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
