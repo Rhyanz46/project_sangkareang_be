@@ -224,15 +224,7 @@ def list_jobs_of_user(username, page):
 
     result = []
     for item in jobs.items:
-        result.append({
-            "id": item.id,
-            "name": item.name,
-            "done": item.done,
-            "category": {
-                "id": item.job_category.id,
-                "name": item.job_category.name
-            }
-        })
+        result.append(item.__serialize__())
 
     meta = {
         "total_data": jobs.total,
