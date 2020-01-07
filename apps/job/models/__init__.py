@@ -35,10 +35,6 @@ class Job(db.Model):
     time_created = db.Column(db.DateTime, default=datetime.now())
 
     def __serialize__(self):
-        job_ca = JobCategory.query.filter_by(id=self.category_id).first()
-        job_ca_name = None
-        if job_ca:
-            job_ca_name = job_ca.name
         data = {
             "id": self.id,
             "name": self.name,
@@ -55,8 +51,8 @@ class Job(db.Model):
                 "jasa": self.nilai_jasa
             },
             "category": {
-                "id": self.category_id,
-                "name": job_ca_name
+                "id": self.job_category.id,
+                "name": self.job_category.name
             }
         }
         return data

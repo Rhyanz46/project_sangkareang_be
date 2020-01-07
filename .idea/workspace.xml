@@ -4,9 +4,7 @@
     <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="create a job with category">
       <change afterPath="$PROJECT_DIR$/apps/job/services/tesss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/services/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/services/list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,14 +240,10 @@
       <workItem from="1578109096320" duration="2243000" />
       <workItem from="1578137550532" duration="99000" />
       <workItem from="1578275049189" duration="8337000" />
-      <workItem from="1578301308265" duration="5765000" />
-    </task>
-    <task id="LOCAL-00022" summary="update req.txt">
-      <created>1576996733330</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1576996733330</updated>
+      <workItem from="1578301308265" duration="7252000" />
+      <workItem from="1578351801818" duration="110000" />
+      <workItem from="1578355018250" duration="1035000" />
+      <workItem from="1578409230964" duration="690000" />
     </task>
     <task id="LOCAL-00023" summary="fixing user ca_name after login">
       <created>1576999355777</created>
@@ -587,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578307023887</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="update fixing">
+      <created>1578307776704</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1578307776704</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +608,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move to separate models" />
     <MESSAGE value="dea" />
     <MESSAGE value="delete a user" />
     <MESSAGE value="fixing parser" />
@@ -632,7 +632,8 @@
     <MESSAGE value="accept job" />
     <MESSAGE value="fixing bugs" />
     <MESSAGE value="bug fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixing" />
+    <MESSAGE value="update fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="update fixing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -647,10 +648,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578307023663">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578307776504">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578307023663" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578307776504" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -663,26 +664,26 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="147" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1575990055193" />
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1578306953493">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1578317603199">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.bottom/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578306953493" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1578306953492">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578317603199" />
+    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1578317603198">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.center/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578306953492" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1578306953492">
+    <state width="1320" height="173" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578317603198" />
+    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1578317603198">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.left/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578306953492" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1578306953493">
+    <state width="1320" height="173" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578317603198" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1578317603199">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.right/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578306953493" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578317603199" />
     <state x="176" y="24" key="SettingsEditor" timestamp="1577719068603">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -692,15 +693,15 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578307030572">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578307801012">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578307030572" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578301309064">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578307801012" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578351845054">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="342" y="211" key="com.intellij.ide.util.TipDialog/0.24.1360.744/1360.0.1360.768@0.24.1360.744" timestamp="1576334705827" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1578301309064" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1578351845054" />
     <state x="455" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578279947548">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -721,6 +722,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Liqolabs$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1569436606776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Liqolabs$Liqolabs.coverage" NAME="Liqolabs Coverage Results" MODIFIED="1569251319119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sangkareang$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1578302094951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sangkareang$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1578409445791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
