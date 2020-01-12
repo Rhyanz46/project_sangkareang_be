@@ -24,7 +24,7 @@ class Job(db.Model):
     nilai_jasa = db.Column(db.String(255))
 
     job_location = db.Column(db.String(255))
-    no_spk = db.Column(db.String(255))
+    no_spk = db.Column(db.String(255), unique=True)
     given_by = db.Column(db.String(255))
     category_id = db.Column(db.Integer, db.ForeignKey("job_category.id"))
 
