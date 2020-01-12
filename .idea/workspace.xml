@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="">
+    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="show detail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/category_access/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/category_access/interfaces/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/parser/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,14 +246,7 @@
       <workItem from="1578409230964" duration="2754000" />
       <workItem from="1578530417306" duration="157000" />
       <workItem from="1578661615610" duration="8000" />
-      <workItem from="1578832722044" duration="10494000" />
-    </task>
-    <task id="LOCAL-00025" summary="add install script">
-      <created>1577002969476</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1577002969476</updated>
+      <workItem from="1578832722044" duration="12614000" />
     </task>
     <task id="LOCAL-00026" summary="update install script">
       <created>1577003184889</created>
@@ -593,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578411931307</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="set unique for no spk">
+      <created>1578844702084</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1578844702085</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixing parser" />
     <MESSAGE value="create job category" />
     <MESSAGE value="show job ca list" />
     <MESSAGE value="delete a job" />
@@ -638,7 +635,8 @@
     <MESSAGE value="update fixing" />
     <MESSAGE value="fixing get data" />
     <MESSAGE value="show detail" />
-    <option name="LAST_COMMIT_MESSAGE" value="show detail" />
+    <MESSAGE value="set unique for no spk" />
+    <option name="LAST_COMMIT_MESSAGE" value="set unique for no spk" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -653,18 +651,18 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578844579757">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578844725355">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578844579757" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578844725355" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.24.1366.744@0.24.1366.744" timestamp="1575989736023" />
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578844578195">
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578844723691">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578844578195" />
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578844723691" />
     <state x="470" y="147" key="FileChooserDialogImpl" timestamp="1575990055193">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
