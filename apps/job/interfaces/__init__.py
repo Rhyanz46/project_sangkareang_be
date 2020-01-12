@@ -10,6 +10,7 @@ bp = Blueprint('job', __name__, url_prefix='/job')
 @bp.route('', methods=['POST', 'GET'])
 def index():
     if method_is('POST'):
+        from apps.job.models import Job
         data = parser.ValueChecker(request.json)
         data.parse('name', str, length=100)
         data.parse('description', str, nullable=True, length=300)
@@ -21,7 +22,7 @@ def index():
         data.parse('nilai_jasa', str, nullable=True, length=255)
 
         data.parse('job_location', str, nullable=True, length=255)
-        data.parse('no_spk', str, nullable=True, length=255)
+        data.parse('no_spk', str, nullable=True, length=255, unique_from_model={'model': Job, 'field': 'no_spk'})
         data.parse('given_by', str, length=255)
         data.parse('category_id', int, length=11)
 
