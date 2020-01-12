@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="show detail">
+    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/interfaces/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/parser/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/job/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/services/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,21 +245,7 @@
       <workItem from="1578409230964" duration="2754000" />
       <workItem from="1578530417306" duration="157000" />
       <workItem from="1578661615610" duration="8000" />
-      <workItem from="1578832722044" duration="12614000" />
-    </task>
-    <task id="LOCAL-00026" summary="update install script">
-      <created>1577003184889</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1577003184889</updated>
-    </task>
-    <task id="LOCAL-00027" summary="create supervisor conf">
-      <created>1577004850602</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1577004850602</updated>
+      <workItem from="1578832722044" duration="13203000" />
     </task>
     <task id="LOCAL-00028" summary="fixing create_supervisor_conf.py">
       <created>1577004992171</created>
@@ -591,7 +576,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578844702085</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="add feature to request parser">
+      <created>1578846669822</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1578846669822</updated>
+    </task>
+    <task id="LOCAL-00076" summary="req unique value">
+      <created>1578846858912</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1578846858912</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,8 +610,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create job category" />
-    <MESSAGE value="show job ca list" />
     <MESSAGE value="delete a job" />
     <MESSAGE value="create a job with category" />
     <MESSAGE value="d" />
@@ -636,7 +633,9 @@
     <MESSAGE value="fixing get data" />
     <MESSAGE value="show detail" />
     <MESSAGE value="set unique for no spk" />
-    <option name="LAST_COMMIT_MESSAGE" value="set unique for no spk" />
+    <MESSAGE value="add feature to request parser" />
+    <MESSAGE value="req unique value" />
+    <option name="LAST_COMMIT_MESSAGE" value="req unique value" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -651,10 +650,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578846669598">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578846858732">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578846669598" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578846858732" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -696,10 +695,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578846738432">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578846869303">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578846738432" />
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578846869303" />
     <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578530419833">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

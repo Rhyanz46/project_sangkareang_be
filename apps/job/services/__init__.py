@@ -152,6 +152,8 @@ def detail_job(job_id, data=None, mode=None):
                     return {"error": "you can't edit done status for this job :)"}, 400
                 job.done = data['done']
         if not isinstance(None, type(data['accept'])):
+            if not job.done:
+                return {"error": "this job must be done to set accept"}, 400
             if not job.accepted:
                 job.accepted = data['accept']
             else:
