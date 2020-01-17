@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="">
+    <list default="true" id="455cfc02-491c-4568-b31e-093eb2b14fa5" name="Default Changelist" comment="job must be done to accept">
+      <change afterPath="$PROJECT_DIR$/.flaskenv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/job/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/job/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/cli/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cli/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/req.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,28 +250,11 @@
       <workItem from="1578409230964" duration="2754000" />
       <workItem from="1578530417306" duration="157000" />
       <workItem from="1578661615610" duration="8000" />
-      <workItem from="1578832722044" duration="13203000" />
-    </task>
-    <task id="LOCAL-00028" summary="fixing create_supervisor_conf.py">
-      <created>1577004992171</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1577004992171</updated>
-    </task>
-    <task id="LOCAL-00029" summary="finishing installation">
-      <created>1577005877588</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1577005877588</updated>
-    </task>
-    <task id="LOCAL-00030" summary="add nginx service">
-      <created>1577007178977</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1577007178977</updated>
+      <workItem from="1578832722044" duration="14904000" />
+      <workItem from="1578879367020" duration="983000" />
+      <workItem from="1578882345039" duration="3506000" />
+      <workItem from="1579059244338" duration="3265000" />
+      <workItem from="1579224499695" duration="6706000" />
     </task>
     <task id="LOCAL-00031" summary="finishing install script">
       <created>1577009122585</created>
@@ -590,7 +578,28 @@
       <option name="project" value="LOCAL" />
       <updated>1578846858912</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="job must be done to accept">
+      <created>1578847255156</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1578847255156</updated>
+    </task>
+    <task id="LOCAL-00078" summary="update req">
+      <created>1578847739205</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1578847739205</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fixing req">
+      <created>1578847999416</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1578847999416</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,9 +619,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete a job" />
-    <MESSAGE value="create a job with category" />
-    <MESSAGE value="d" />
     <MESSAGE value="a" />
     <MESSAGE value="create a user with category access id" />
     <MESSAGE value="show user CA" />
@@ -635,7 +641,10 @@
     <MESSAGE value="set unique for no spk" />
     <MESSAGE value="add feature to request parser" />
     <MESSAGE value="req unique value" />
-    <option name="LAST_COMMIT_MESSAGE" value="req unique value" />
+    <MESSAGE value="job must be done to accept" />
+    <MESSAGE value="update req" />
+    <MESSAGE value="fixing req" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing req" />
   </component>
   <component name="WindowStateProjectService">
     <state x="282" y="48" key="#Inspections" timestamp="1575932629033">
@@ -650,42 +659,42 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="419" y="173" key="#com.intellij.ide.util.TreeClassChooserDialog/0.24.1366.744@0.24.1366.744" timestamp="1577943894922" />
-    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578846858732">
+    <state x="300" y="24" key="CommitChangelistDialog2" timestamp="1578847999264">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578846858732" />
+    <state x="300" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1578847999264" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1575989736023">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="254" height="195" key="DatabaseViewActions_Filter/0.24.1366.744@0.24.1366.744" timestamp="1575989736023" />
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578846647972">
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog" timestamp="1578847736527">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578846647972" />
+    <state x="0" y="24" width="1366" height="744" key="DiffContextDialog/0.24.1366.744@0.24.1366.744" timestamp="1578847736527" />
     <state x="470" y="147" key="FileChooserDialogImpl" timestamp="1575990055193">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="147" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1575990055193" />
-    <state width="1320" height="204" key="GridCell.Tab.0.bottom" timestamp="1578841190863">
+    <state width="1320" height="204" key="GridCell.Tab.0.bottom" timestamp="1578848897878">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.bottom/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="204" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578841190863" />
-    <state width="1320" height="204" key="GridCell.Tab.0.center" timestamp="1578841190861">
+    <state width="1320" height="204" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1578848897878" />
+    <state width="1320" height="204" key="GridCell.Tab.0.center" timestamp="1578848897876">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.center/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="204" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578841190861" />
-    <state width="1320" height="204" key="GridCell.Tab.0.left" timestamp="1578841190860">
+    <state width="1320" height="204" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1578848897876" />
+    <state width="1320" height="204" key="GridCell.Tab.0.left" timestamp="1578848897875">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.left/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="204" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578841190860" />
-    <state width="1320" height="204" key="GridCell.Tab.0.right" timestamp="1578841190862">
+    <state width="1320" height="204" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1578848897875" />
+    <state width="1320" height="204" key="GridCell.Tab.0.right" timestamp="1578848897877">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1314" height="184" key="GridCell.Tab.0.right/0.24.1360.744/1366.0.1360.768@0.24.1360.744" timestamp="1575806035744" />
-    <state width="1320" height="204" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578841190862" />
+    <state width="1320" height="204" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1578848897877" />
     <state x="176" y="24" key="SettingsEditor" timestamp="1577719068603">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -695,15 +704,15 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="470" y="92" key="VCS.ChangeListViewerDialog/0.24.1366.744@0.24.1366.744" timestamp="1577171755651" />
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578846869303">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2" timestamp="1578848003136">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578846869303" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578530419833">
+    <state x="282" y="123" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1578848003136" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578879368823">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="342" y="211" key="com.intellij.ide.util.TipDialog/0.24.1360.744/1360.0.1360.768@0.24.1360.744" timestamp="1576334705827" />
-    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1578530419833" />
+    <state x="344" y="211" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1578879368823" />
     <state x="455" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578279947548">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

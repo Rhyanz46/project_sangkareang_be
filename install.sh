@@ -6,8 +6,6 @@ sleep 1s
 . env/bin/activate
 sleep 1s
 pip install -r req.txt
-export FLASK_APP=app.py
-export FLASK_ENV=development
 flask new
 sudo python3 create_supervisor_conf.py
 sudo supervisorctl reread
